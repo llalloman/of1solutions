@@ -1,11 +1,1 @@
-# Cloudflare Pages - Redirects Configuration
-# This file handles URL redirects and rewrites
-
-# Redirect www to non-www (or vice versa)
-https://www.of1solutions.com/* https://of1solutions.com/:splat 301
-
-# Force HTTPS
-http://of1solutions.com/* https://of1solutions.com/:splat 301
-
-# Custom 404 page (optional - create 404.html if needed)
-/* /index.html 404
+/index.html 200
