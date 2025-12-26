@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OF1 SOLUTIONS - Soluciones TI inteligentes para empresas que buscan innovación, optimización y crecimiento. Transformando tu futuro con tecnología escalable.">
+    <meta name="keywords" content="desarrollo software, infraestructura TI, optimización sistemas, integración empresarial, OF1 SOLUTIONS">
+    <meta name="author" content="OF1 SOLUTIONS">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OF1 SOLUTIONS - Transformando tu futuro con tecnología">
+    <meta property="og:description" content="Soluciones TI inteligentes para empresas que buscan innovación, optimización y crecimiento">
+    
+    <title>OF1 SOLUTIONS - Transformando tu futuro con tecnología escalable</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="#inicio">
+                    <img src="assets/logo.png" alt="OF1 SOLUTIONS Logo" class="logo-image">
+                </a>
+            </div>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#soluciones" class="nav__link">Soluciones</a></li>
+                    <li class="nav__item"><a href="#casos" class="nav__link">Casos de Éxito</a></li>
+                    <li class="nav__item"><a href="#equipo" class="nav__link">Equipo</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#contacto" class="btn btn--primary btn--header">Contáctanos</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="nav__toggle-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">Transformando tu futuro con tecnología escalable</h1>
+                <p class="hero__subtitle">Soluciones TI inteligentes para empresas que buscan innovación, optimización y crecimiento</p>
+                <div class="hero__cta">
+                    <a href="#contacto" class="btn btn--primary btn--large">Comienza ahora</a>
+                    <a href="#servicios" class="btn btn--secondary btn--large">Conoce más</a>
+                </div>
+            </div>
+            <div class="hero__image">
+                <div class="hero__illustration">
+                    <!-- Tech illustration SVG -->
+                    <svg viewBox="0 0 500 500" class="hero__svg">
+                        <defs>
+                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0078D4;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2DCCD3;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="250" cy="250" r="150" fill="url(#gradient1)" opacity="0.1"/>
+                        <circle cx="250" cy="250" r="120" fill="none" stroke="url(#gradient1)" stroke-width="2"/>
+                        <circle cx="250" cy="250" r="90" fill="none" stroke="url(#gradient1)" stroke-width="2"/>
+                        <circle cx="250" cy="130" r="8" fill="#0078D4"/>
+                        <circle cx="370" cy="250" r="8" fill="#2DCCD3"/>
+                        <circle cx="250" cy="370" r="8" fill="#0078D4"/>
+                        <circle cx="130" cy="250" r="8" fill="#2DCCD3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <a href="#servicios" class="scroll-indicator">
+                <span class="scroll-indicator__text">Scroll</span>
+                <span class="scroll-indicator__arrow"></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Soluciones tecnológicas integrales diseñadas para impulsar tu negocio</p>
+            </div>
+            
+            <div class="services__grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Desarrollo de Software a Medida</h3>
+                    <p class="service-card__description">Creamos aplicaciones personalizadas que se adaptan perfectamente a tus procesos de negocio, con tecnologías modernas y escalables.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Optimización de Sistemas y Rendimiento</h3>
+                    <p class="service-card__description">Analizamos y mejoramos la eficiencia de tus sistemas actuales, reduciendo costos operativos y aumentando la productividad.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Integración de Plataformas Empresariales</h3>
+                    <p class="service-card__description">Conectamos tus sistemas existentes para crear un ecosistema digital cohesivo y automatizado que trabaja sin fricciones.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="8" cy="7" r="1" fill="currentColor"/>
+                            <circle cx="8" cy="12" r="1" fill="currentColor"/>
+                            <circle cx="8" cy="17" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card__title">Infraestructura y Despliegue Escalable</h3>
+                    <p class="service-card__description">Diseñamos e implementamos infraestructuras cloud robustas y escalables que crecen junto con tu empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology" id="soluciones">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Proceso</h2>
+                <p class="section-subtitle">Metodología probada para garantizar el éxito de cada proyecto</p>
+            </div>
+            
+            <div class="methodology__steps">
+                <!-- Step 1 -->
+                <div class="methodology__step">
+                    <div class="methodology__step-number">01</div>
+                    <div class="methodology__step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="methodology__step-title">Consultoría</h3>
+                    <p class="methodology__step-description">Analizamos tus necesidades y definimos la mejor estrategia tecnológica para tu negocio.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="methodology__step">
+                    <div class="methodology__step-number">02</div>
+                    <div class="methodology__step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="methodology__step-title">Planificación</h3>
+                    <p class="methodology__step-description">Diseñamos una hoja de ruta detallada con objetivos claros, plazos y entregables específicos.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="methodology__step">
+                    <div class="methodology__step-number">03</div>
+                    <div class="methodology__step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="methodology__step-title">Ejecución</h3>
+                    <p class="methodology__step-description">Desarrollamos e implementamos la solución con metodologías ágiles y comunicación constante.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="methodology__step">
+                    <div class="methodology__step-number">04</div>
+                    <div class="methodology__step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="methodology__step-title">Soporte</h3>
+                    <p class="methodology__step-description">Brindamos acompañamiento continuo, mantenimiento y mejoras para asegurar el éxito a largo plazo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="cases" id="casos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Resultados Reales</h2>
+                <p class="section-subtitle">Casos de éxito que demuestran nuestro compromiso con la excelencia</p>
+            </div>
+            
+            <div class="cases__grid">
+                <!-- Case 1 -->
+                <div class="case-card">
+                    <div class="case-card__image">
+                        <img src="assets/case-1.jpg" alt="Sistema de gestión empresarial" loading="lazy">
+                    </div>
+                    <div class="case-card__content">
+                        <h3 class="case-card__title">Sistema de Gestión Empresarial</h3>
+                        <p class="case-card__description">Desarrollo de ERP personalizado que redujo tiempos operativos en 40% para empresa de logística.</p>
+                        <div class="case-card__tags">
+                            <span class="tag">ERP</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="case-card">
+                    <div class="case-card__image">
+                        <img src="assets/case-2.jpg" alt="Plataforma de e-commerce" loading="lazy">
+                    </div>
+                    <div class="case-card__content">
+                        <h3 class="case-card__title">Plataforma E-commerce</h3>
+                        <p class="case-card__description">Implementación de tienda online escalable que triplicó las ventas digitales en 6 meses.</p>
+                        <div class="case-card__tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Payment Gateway</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case 3 -->
+                <div class="case-card">
+                    <div class="case-card__image">
+                        <img src="assets/case-3.jpg" alt="Migración a la nube" loading="lazy">
+                    </div>
+                    <div class="case-card__content">
+                        <h3 class="case-card__title">Migración a Cloud</h3>
+                        <p class="case-card__description">Migración completa de infraestructura legacy a AWS, mejorando disponibilidad al 99.9%.</p>
+                        <div class="case-card__tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">DevOps</span>
+                            <span class="tag">Migration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="equipo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <p class="section-subtitle">Un equipo comprometido con tu éxito digital</p>
+            </div>
+            
+            <div class="team__content">
+                <div class="team__profile">
+                    <div class="profile-card">
+                        <div class="profile-card__image">
+                            <img src="assets/walter-molina.jpg" alt="Walter Molina - Fundador" loading="lazy">
+                        </div>
+                        <h3 class="profile-card__name">Walter Molina</h3>
+                        <p class="profile-card__role">Fundador & CEO</p>
+                        <p class="profile-card__bio">Líder tecnológico con más de 15 años de experiencia en desarrollo de software y transformación digital empresarial.</p>
+                        <a href="https://linkedin.com/in/waltermolina" class="profile-card__linkedin" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team__mission">
+                    <div class="mission-vision">
+                        <div class="mission-vision__item">
+                            <h3 class="mission-vision__title">Misión</h3>
+                            <p class="mission-vision__text">Transformar empresas a través de soluciones tecnológicas innovadoras que optimicen procesos, mejoren la eficiencia y generen valor sostenible.</p>
+                        </div>
+                        
+                        <div class="mission-vision__item">
+                            <h3 class="mission-vision__title">Visión</h3>
+                            <p class="mission-vision__text">Ser el socio tecnológico de confianza que impulsa la transformación digital de empresas en toda Latinoamérica.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="values">
+                        <h3 class="values__title">Nuestros Valores</h3>
+                        <div class="values__grid">
+                            <div class="value-item">
+                                <div class="value-item__icon">💡</div>
+                                <h4 class="value-item__title">Innovación</h4>
+                                <p class="value-item__text">Buscamos constantemente nuevas formas de resolver problemas</p>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-item__icon">📈</div>
+                                <h4 class="value-item__title">Escalabilidad</h4>
+                                <p class="value-item__text">Diseñamos soluciones que crecen con tu negocio</p>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-item__icon">🤝</div>
+                                <h4 class="value-item__title">Confianza</h4>
+                                <p class="value-item__text">Construimos relaciones de largo plazo basadas en resultados</p>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-item__icon">⭐</div>
+                                <h4 class="value-item__title">Calidad</h4>
+                                <p class="value-item__text">Comprometidos con la excelencia en cada proyecto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hablemos de tu Proyecto</h2>
+                <p class="section-subtitle">Estamos listos para ayudarte a transformar tu negocio</p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre completo</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--large btn--full">Enviar mensaje</button>
+                    </form>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success__icon">✓</div>
+                        <h3 class="form-success__title">¡Mensaje enviado!</h3>
+                        <p class="form-success__text">Gracias por contactarnos. Te responderemos pronto.</p>
+                    </div>
+                </div>
+                
+                <div class="contact__info">
+                    <div class="contact-info">
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">Ubicación</h4>
+                                <p class="contact-info__text">Lima, Perú</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">Email</h4>
+                                <p class="contact-info__text"><a href="mailto:contacto@of1solutions.com">contacto@of1solutions.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">Teléfono</h4>
+                                <p class="contact-info__text"><a href="tel:+51999999999">+51 999 999 999</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info__item">
+                            <div class="contact-info__icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-info__content">
+                                <h4 class="contact-info__title">LinkedIn</h4>
+                                <p class="contact-info__text"><a href="https://linkedin.com/company/of1solutions" target="_blank" rel="noopener">OF1 SOLUTIONS</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="assets/logo-light.png" alt="OF1 SOLUTIONS Logo" class="footer__logo-image">
+                    <p class="footer__tagline">Transformamos tu futuro</p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__title">Enlaces Rápidos</h4>
+                    <ul class="footer__list">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#soluciones">Soluciones</a></li>
+                        <li><a href="#casos">Casos de Éxito</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__title">Empresa</h4>
+                    <ul class="footer__list">
+                        <li><a href="#equipo">Equipo</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#privacidad">Política de Privacidad</a></li>
+                        <li><a href="#terminos">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__social">
+                    <h4 class="footer__title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/company/of1solutions" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 OF1 SOLUTIONS. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>

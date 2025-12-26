@@ -1,0 +1,30 @@
+# Cloudflare Pages - Wrangler Configuration
+# This file is optional for Cloudflare Pages but useful for advanced configurations
+
+name = "of1solutions"
+compatibility_date = "2025-01-01"
+
+# Pages Project Configuration
+[env.production]
+name = "of1solutions"
+workers_dev = false
+
+# Build Configuration (if using Wrangler for deployment)
+# For static sites, Cloudflare Pages automatically detects and builds
+
+# Custom Routes (optional)
+# [[routes]]
+# pattern = "of1solutions.com/*"
+# custom_domain = true
+
+# Environment Variables (optional)
+# [vars]
+# CONTACT_EMAIL = "contacto@of1solutions.com"
+
+# KV Namespaces (if needed for dynamic features)
+# [[kv_namespaces]]
+# binding = "CONTACT_FORMS"
+# id = "your-kv-namespace-id"
+
+# Compatibility Flags
+compatibility_flags = []
