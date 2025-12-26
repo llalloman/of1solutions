@@ -230,8 +230,9 @@ button {
 }
 
 .logo-image {
-    height: 50px;
+    height: 80px;
     width: auto;
+    max-width: 400px;
 }
 
 .nav__list {
@@ -535,80 +536,175 @@ button {
 }
 
 /* ========================================
-   7. CASE STUDIES SECTION
+   7. CASE STUDIES SECTION (CAROUSEL)
    ======================================== */
 
 .cases {
     padding: var(--spacing-3xl) 0;
     background: linear-gradient(180deg, #F8FAFB 0%, var(--color-white) 100%);
+    overflow: hidden;
 }
 
-.cases__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-xl);
+.cases__carousel {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+}
+
+.cases__track {
+    display: flex;
+    gap: var(--spacing-lg);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: var(--spacing-md) 0;
+}
+
+.cases__track::-webkit-scrollbar {
+    display: none;
 }
 
 .case-card {
+    flex: 0 0 calc(33.333% - var(--spacing-lg));
+    min-width: 280px;
     background: var(--color-white);
     border-radius: var(--radius-xl);
-    overflow: hidden;
+    padding: var(--spacing-xl);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
-    cursor: pointer;
+    scroll-snap-align: start;
+    border-top: 4px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
 }
 
 .case-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
+    border-top-color: var(--color-secondary);
 }
 
-.case-card__image {
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-    position: relative;
+.case-card__icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
 }
 
-.case-card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-slow);
-}
-
-.case-card:hover .case-card__image img {
-    transform: scale(1.1);
-}
-
-.case-card__content {
-    padding: var(--spacing-xl);
+.case-card__icon svg {
+    width: 32px;
+    height: 32px;
 }
 
 .case-card__title {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-xl);
     margin-bottom: var(--spacing-sm);
+    color: var(--color-dark);
+    line-height: 1.3;
 }
 
 .case-card__description {
     color: var(--color-gray-medium);
+    line-height: 1.6;
     margin-bottom: var(--spacing-md);
-}
-
-.case-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-}
-
-.tag {
-    display: inline-block;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background: rgba(0, 120, 212, 0.1);
-    color: var(--color-primary);
+    flex-grow: 1;
     font-size: var(--fs-sm);
+}
+
+.case-card__metric {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-xs);
+    padding-top: var(--spacing-md);
+    border-top: 2px solid var(--color-gray-light);
+}
+
+.metric__number {
+    font-size: var(--fs-3xl);
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metric__label {
+    font-size: var(--fs-sm);
+    color: var(--color-gray-medium);
     font-weight: 500;
+}
+
+/* Carousel Buttons */
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    transition: all var(--transition-base);
+    z-index: 10;
+}
+
+.carousel__button:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel__button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel__button--prev {
+    left: -24px;
+}
+
+.carousel__button--next {
+    right: -24px;
+}
+
+/* Carousel Indicators */
+.carousel__indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-gray-light);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.indicator:hover,
+.indicator.active {
+    background: var(--color-primary);
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    width: 32px;
     border-radius: var(--radius-full);
 }
 
@@ -1194,9 +1290,22 @@ button {
         grid-template-columns: 1fr;
     }
     
-    /* Cases Mobile */
-    .cases__grid {
-        grid-template-columns: 1fr;
+    /* Cases Carousel Mobile */
+    .case-card {
+        flex: 0 0 85%;
+    }
+    
+    .carousel__button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel__button--prev {
+        left: -12px;
+    }
+    
+    .carousel__button--next {
+        right: -12px;
     }
     
     /* Team Mobile */

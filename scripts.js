@@ -102,6 +102,142 @@ if (navToggle && nav) {
 }
 
 // ========================================
+// 2.5 CASES CAROUSEL
+// ========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.cases__track');
+    const prevButton = document.querySelector('.carousel__button--prev');
+    const nextButton = document.querySelector('.carousel__button--next');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (!track || !prevButton || !nextButton) return;
+    
+    let currentSlide = 0;
+    const cards = document.querySelectorAll('.case-card');
+    const totalSlides = cards.length;
+    
+    function getCardsPerView() {
+        if (window.innerWidth < 768) return 1;
+        if (window.innerWidth < 1024) return 2;
+        return 3;
+    }
+    
+    function updateCarousel() {
+        const cardsPerView = getCardsPerView();
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 24; // var(--spacing-lg)
+        const scrollAmount = (cardWidth + gap) * currentSlide;
+        
+        track.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentSlide);
+        });
+        
+        // Update buttons state
+        prevButton.style.opacity = currentSlide === 0 ? '0.5' : '1';
+        prevButton.style.cursor = currentSlide === 0 ? 'not-allowed' : 'pointer';
+        nextButton.style.opacity = currentSlide >= totalSlides - cardsPerView ? '0.5' : '1';
+        nextButton.style.cursor = currentSlide >= totalSlides - cardsPerView ? 'not-allowed' : 'pointer';
+    }
+    
+    prevButton.addEventListener('click', function() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateCarousel();
+        }
+    });
+    
+    nextButton.addEventListener('click', function() {
+        const cardsPerView = getCardsPerView();
+        if (currentSlide < totalSlides - cardsPerView) {
+            currentSlide++;
+            updateCarousel();
+        }
+    });
+    
+    // Indicator clicks
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            currentSlide = index;
+            updateCarousel();
+        });
+    });
+    
+    // Touch/Swipe support
+    let startX = 0;
+    let scrollLeft = 0;
+    
+    track.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].pageX;
+        scrollLeft = track.scrollLeft;
+    });
+    
+    track.addEventListener('touchmove', function(e) {
+        const x = e.touches[0].pageX;
+        const walk = (startX - x) * 2;
+        track.scrollLeft = scrollLeft + walk;
+    });
+    
+    track.addEventListener('touchend', function() {
+        const cardWidth = cards[0].offsetWidth;
+        const gap = 24;
+        currentSlide = Math.round(track.scrollLeft / (cardWidth + gap));
+        updateCarousel();
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            prevButton.click();
+        } else if (e.key === 'ArrowRight') {
+            nextButton.click();
+        }
+    });
+    
+    // Auto-play (optional)
+    let autoplayInterval;
+    
+    function startAutoplay() {
+        autoplayInterval = setInterval(function() {
+            const cardsPerView = getCardsPerView();
+            if (currentSlide < totalSlides - cardsPerView) {
+                nextButton.click();
+            } else {
+                currentSlide = 0;
+                updateCarousel();
+            }
+        }, 5000); // Change slide every 5 seconds
+    }
+    
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+    
+    // Start autoplay
+    startAutoplay();
+    
+    // Pause autoplay on hover
+    track.addEventListener('mouseenter', stopAutoplay);
+    track.addEventListener('mouseleave', startAutoplay);
+    prevButton.addEventListener('click', stopAutoplay);
+    nextButton.addEventListener('click', stopAutoplay);
+    
+    // Update on window resize
+    window.addEventListener('resize', throttle(function() {
+        updateCarousel();
+    }, 250));
+    
+    // Initial update
+    updateCarousel();
+});
+
+// ========================================
 // 3. HEADER SCROLL EFFECT
 // ========================================
 
@@ -180,35 +316,41 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission
-        // In production, replace this with actual API call
-        console.log('Form submitted:', data);
+        // Disable submit button to prevent double submission
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
         
-        // Show success message
-        showSuccessMessage();
+        // Send to Formspree
+        const formspreeEndpoint = 'https://formspree.io/f/xeeqjbyd';
         
-        // Reset form
-        contactForm.reset();
-        
-        // In production, you would send data to your backend:
-        /*
-        fetch('/api/contact', {
+        fetch(formspreeEndpoint, {
             method: 'POST',
+            body: formData,
             headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+                'Accept': 'application/json'
+            }
         })
-        .then(response => response.json())
-        .then(result => {
-            showSuccessMessage();
-            contactForm.reset();
+        .then(response => {
+            if (response.ok) {
+                showSuccessMessage();
+                contactForm.reset();
+            } else {
+                return response.json().then(data => {
+                    throw new Error(data.error || 'Error al enviar el formulario');
+                });
+            }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+            alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctanos directamente por email.');
+        })
+        .finally(() => {
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
         });
-        */
     });
 }
 
