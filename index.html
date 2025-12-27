@@ -40,8 +40,7 @@
                     <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
                     <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
                     <li class="nav__item"><a href="#casos" class="nav__link">Casos de Éxito</a></li>
-                    <li class="nav__item"><a href="#testimonios" class="nav__link">Testimonios</a></li>
-                    <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
                     <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
                 </ul>
             </nav>
@@ -632,236 +631,23 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section class="blog" id="blog">
+    <!-- Blog CTA Section -->
+    <section class="blog-cta" id="blog">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Blog & Recursos</h2>
-                <p class="section-subtitle">Insights y mejores prácticas en tecnología empresarial</p>
-            </div>
-            
-            <div class="blog__grid">
-                <article class="blog-card">
-                    <div class="blog-card__image">
-                        <div class="blog-card__placeholder">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__meta">
-                            <span class="blog-card__category">Optimización</span>
-                            <span class="blog-card__date">15 Dic 2024</span>
-                        </div>
-                        <h3 class="blog-card__title">5 Señales de que tu Sistema Necesita Modernización</h3>
-                        <p class="blog-card__excerpt">¿Tu sistema es lento, presenta errores frecuentes o limita el crecimiento? Descubre las señales clave que indican que es momento de actualizar tu infraestructura tecnológica.</p>
-                        <a href="#blog" class="blog-card__link">
-                            Leer más
-                            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-card__image">
-                        <div class="blog-card__placeholder">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__meta">
-                            <span class="blog-card__category">Cloud</span>
-                            <span class="blog-card__date">10 Dic 2024</span>
-                        </div>
-                        <h3 class="blog-card__title">Cómo Migrar a la Nube sin Interrupciones</h3>
-                        <p class="blog-card__excerpt">Una guía completa sobre estrategias de migración cloud que minimizan riesgos, reducen costos y garantizan continuidad operativa durante todo el proceso de transición.</p>
-                        <a href="#blog" class="blog-card__link">
-                            Leer más
-                            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-card__image">
-                        <div class="blog-card__placeholder">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 2v20M17 7H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__meta">
-                            <span class="blog-card__category">Automatización</span>
-                            <span class="blog-card__date">5 Dic 2024</span>
-                        </div>
-                        <h3 class="blog-card__title">ROI de la Automatización: Casos Reales</h3>
-                        <p class="blog-card__excerpt">Análisis detallado de cómo la automatización de procesos generó retornos de inversión del 300% en menos de 6 meses. Incluye métricas y lecciones aprendidas.</p>
-                        <a href="#blog" class="blog-card__link">
-                            Leer más
-                            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Calculator Section -->
-    <section class="calculator" id="calculadora">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Estima tu Proyecto</h2>
-                <p class="section-subtitle">Obtén una estimación inicial de tiempo y costo para tu proyecto</p>
-            </div>
-            
-            <div class="calculator__content">
-                <form class="calculator__form" id="calculatorForm">
-                    <div class="calculator__step active" data-step="1">
-                        <h3 class="calculator__step-title">¿Qué tipo de proyecto necesitas?</h3>
-                        <div class="calculator__options">
-                            <label class="calculator__option">
-                                <input type="radio" name="projectType" value="web" required>
-                                <div class="calculator__option-content">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2"/>
-                                        <path d="M8 21h8M12 17v4" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <span>Aplicación Web</span>
-                                </div>
-                            </label>
-                            <label class="calculator__option">
-                                <input type="radio" name="projectType" value="mobile" required>
-                                <div class="calculator__option-content">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <rect x="5" y="2" width="14" height="20" rx="2" stroke-width="2"/>
-                                        <path d="M12 18h.01" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    <span>App Móvil</span>
-                                </div>
-                            </label>
-                            <label class="calculator__option">
-                                <input type="radio" name="projectType" value="system" required>
-                                <div class="calculator__option-content">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <rect x="3" y="3" width="7" height="7" stroke-width="2"/>
-                                        <rect x="14" y="3" width="7" height="7" stroke-width="2"/>
-                                        <rect x="14" y="14" width="7" height="7" stroke-width="2"/>
-                                        <rect x="3" y="14" width="7" height="7" stroke-width="2"/>
-                                    </svg>
-                                    <span>Sistema Empresarial</span>
-                                </div>
-                            </label>
-                            <label class="calculator__option">
-                                <input type="radio" name="projectType" value="integration" required>
-                                <div class="calculator__option-content">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke-width="2"/>
-                                    </svg>
-                                    <span>Integración</span>
-                                </div>
-                            </label>
-                        </div>
-                        <button type="button" class="btn btn--primary calculator__next">Siguiente</button>
-                    </div>
-
-                    <div class="calculator__step" data-step="2">
-                        <h3 class="calculator__step-title">¿Qué funcionalidades necesitas?</h3>
-                        <div class="calculator__checkboxes">
-                            <label class="calculator__checkbox">
-                                <input type="checkbox" name="features" value="auth">
-                                <span>Sistema de usuarios y autenticación</span>
-                            </label>
-                            <label class="calculator__checkbox">
-                                <input type="checkbox" name="features" value="payments">
-                                <span>Procesamiento de pagos</span>
-                            </label>
-                            <label class="calculator__checkbox">
-                                <input type="checkbox" name="features" value="api">
-                                <span>Integración con APIs externas</span>
-                            </label>
-                            <label class="calculator__checkbox">
-                                <input type="checkbox" name="features" value="reporting">
-                                <span>Reportes y analytics</span>
-                            </label>
-                            <label class="calculator__checkbox">
-                                <input type="checkbox" name="features" value="notifications">
-                                <span>Notificaciones (email/SMS/push)</span>
-                            </label>
-                            <label class="calculator__checkbox">
-                                <input type="checkbox" name="features" value="admin">
-                                <span>Panel de administración</span>
-                            </label>
-                        </div>
-                        <div class="calculator__buttons">
-                            <button type="button" class="btn btn--secondary calculator__prev">Atrás</button>
-                            <button type="button" class="btn btn--primary calculator__next">Siguiente</button>
-                        </div>
-                    </div>
-
-                    <div class="calculator__step" data-step="3">
-                        <h3 class="calculator__step-title">¿Cuál es la complejidad esperada?</h3>
-                        <div class="calculator__options">
-                            <label class="calculator__option">
-                                <input type="radio" name="complexity" value="basic" required>
-                                <div class="calculator__option-content">
-                                    <span class="calculator__option-icon">🌱</span>
-                                    <strong>Básico</strong>
-                                    <small>Funcionalidad estándar</small>
-                                </div>
-                            </label>
-                            <label class="calculator__option">
-                                <input type="radio" name="complexity" value="medium" required>
-                                <div class="calculator__option-content">
-                                    <span class="calculator__option-icon">🚀</span>
-                                    <strong>Medio</strong>
-                                    <small>Características personalizadas</small>
-                                </div>
-                            </label>
-                            <label class="calculator__option">
-                                <input type="radio" name="complexity" value="advanced" required>
-                                <div class="calculator__option-content">
-                                    <span class="calculator__option-icon">⚡</span>
-                                    <strong>Avanzado</strong>
-                                    <small>Altamente especializado</small>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="calculator__buttons">
-                            <button type="button" class="btn btn--secondary calculator__prev">Atrás</button>
-                            <button type="submit" class="btn btn--primary">Ver Estimación</button>
-                        </div>
-                    </div>
-                </form>
-
-                <div class="calculator__result" id="calculatorResult">
-                    <div class="calculator__result-icon">📊</div>
-                    <h3 class="calculator__result-title">Tu Estimación</h3>
-                    <div class="calculator__result-content">
-                        <div class="calculator__result-item">
-                            <span class="calculator__result-label">Tiempo estimado:</span>
-                            <span class="calculator__result-value" id="resultTime">8-12 semanas</span>
-                        </div>
-                        <div class="calculator__result-item">
-                            <span class="calculator__result-label">Inversión aproximada:</span>
-                            <span class="calculator__result-value" id="resultCost">$15,000 - $25,000</span>
-                        </div>
-                    </div>
-                    <p class="calculator__result-note">*Esta es una estimación inicial. El costo y tiempo final se determinarán después de una consultoría detallada.</p>
-                    <div class="calculator__result-actions">
-                        <a href="#contacto" class="btn btn--primary">Solicitar Consultoría</a>
-                        <button type="button" class="btn btn--secondary" id="calculatorReset">Nueva Estimación</button>
-                    </div>
+            <div class="blog-cta__content">
+                <div class="blog-cta__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
+                <h2 class="blog-cta__title">Explora Nuestro Blog</h2>
+                <p class="blog-cta__text">Insights, tendencias y mejores prácticas en tecnología empresarial. Artículos profundos sobre automatización, cloud computing, seguridad y transformación digital.</p>
+                <a href="blog.html" class="btn btn--primary btn--large">
+                    Ver todos los artículos
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
