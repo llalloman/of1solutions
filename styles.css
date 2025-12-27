@@ -1387,6 +1387,8 @@ button {
 .social-link:hover svg {
     transform: scale(1.1);
     color: #ffffff;
+}
+
 .footer__bottom {
     text-align: center;
     padding: var(--spacing-xl) 0;
@@ -1398,8 +1400,6 @@ button {
     font-size: var(--fs-sm);
     color: #9ca3af;
     text-align: center;
-}   content: '•';
-    color: var(--color-secondary);
 }
 
 /* ========================================
