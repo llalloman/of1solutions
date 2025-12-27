@@ -571,3 +571,207 @@ function scrollToTop() {
 console.log('%cOF1 SOLUTIONS', 'color: #0078D4; font-size: 24px; font-weight: bold;');
 console.log('%cTransformamos tu futuro con tecnología', 'color: #2DCCD3; font-size: 14px;');
 console.log('%c¿Interesado en trabajar con nosotros? Visita: contacto@of1solutions.com', 'color: #666; font-size: 12px;');
+
+// ========================================
+// 12. FAQ ACCORDION
+// ========================================
+
+const faqItems = document.querySelectorAll('.faq__item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq__question');
+    
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all items
+        faqItems.forEach(otherItem => {
+            otherItem.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// ========================================
+// 13. CONTACT FORM TYPE SWITCHER
+// ========================================
+
+const contactTypes = document.querySelectorAll('.contact__type');
+const projectTypeGroup = document.getElementById('projectTypeGroup');
+const budgetGroup = document.getElementById('budgetGroup');
+
+contactTypes.forEach(type => {
+    type.addEventListener('click', () => {
+        // Remove active from all
+        contactTypes.forEach(t => t.classList.remove('active'));
+        
+        // Add active to clicked
+        type.classList.add('active');
+        
+        // Show/hide project-specific fields
+        const typeValue = type.getAttribute('data-type');
+        
+        if (typeValue === 'project') {
+            projectTypeGroup.style.display = 'block';
+            budgetGroup.style.display = 'block';
+        } else if (typeValue === 'support') {
+            projectTypeGroup.style.display = 'none';
+            budgetGroup.style.display = 'none';
+        } else {
+            projectTypeGroup.style.display = 'none';
+            budgetGroup.style.display = 'none';
+        }
+    });
+});
+
+// ========================================
+// 14. PROJECT CALCULATOR
+// ========================================
+
+const calculatorForm = document.getElementById('calculatorForm');
+const calculatorResult = document.getElementById('calculatorResult');
+const calculatorReset = document.getElementById('calculatorReset');
+const calculatorSteps = document.querySelectorAll('.calculator__step');
+const nextButtons = document.querySelectorAll('.calculator__next');
+const prevButtons = document.querySelectorAll('.calculator__prev');
+
+let currentStep = 1;
+
+// Next button functionality
+nextButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const currentStepElement = document.querySelector(`.calculator__step[data-step="${currentStep}"]`);
+        
+        // Validate current step
+        const requiredInputs = currentStepElement.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredInputs.forEach(input => {
+            if (input.type === 'radio') {
+                const radioGroup = currentStepElement.querySelectorAll(`[name="${input.name}"]`);
+                const isChecked = Array.from(radioGroup).some(radio => radio.checked);
+                if (!isChecked) isValid = false;
+            }
+        });
+        
+        if (isValid && currentStep < calculatorSteps.length) {
+            currentStepElement.classList.remove('active');
+            currentStep++;
+            document.querySelector(`.calculator__step[data-step="${currentStep}"]`).classList.add('active');
+        }
+    });
+});
+
+// Previous button functionality
+prevButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (currentStep > 1) {
+            document.querySelector(`.calculator__step[data-step="${currentStep}"]`).classList.remove('active');
+            currentStep--;
+            document.querySelector(`.calculator__step[data-step="${currentStep}"]`).classList.add('active');
+        }
+    });
+});
+
+// Calculate and show result
+calculatorForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(calculatorForm);
+    const projectType = formData.get('projectType');
+    const complexity = formData.get('complexity');
+    const features = formData.getAll('features');
+    
+    // Calculate estimation
+    let baseTime = 0;
+    let baseCost = 0;
+    
+    // Base values by project type
+    switch(projectType) {
+        case 'web':
+            baseTime = 8;
+            baseCost = 15000;
+            break;
+        case 'mobile':
+            baseTime = 12;
+            baseCost = 25000;
+            break;
+        case 'system':
+            baseTime = 16;
+            baseCost = 35000;
+            break;
+        case 'integration':
+            baseTime = 6;
+            baseCost = 10000;
+            break;
+    }
+    
+    // Adjust by complexity
+    switch(complexity) {
+        case 'basic':
+            baseTime *= 1;
+            baseCost *= 1;
+            break;
+        case 'medium':
+            baseTime *= 1.5;
+            baseCost *= 1.5;
+            break;
+        case 'advanced':
+            baseTime *= 2;
+            baseCost *= 2;
+            break;
+    }
+    
+    // Add features
+    baseTime += features.length * 1;
+    baseCost += features.length * 3000;
+    
+    // Calculate ranges
+    const minTime = Math.floor(baseTime * 0.9);
+    const maxTime = Math.ceil(baseTime * 1.1);
+    const minCost = Math.floor(baseCost * 0.9);
+    const maxCost = Math.ceil(baseCost * 1.1);
+    
+    // Update result
+    document.getElementById('resultTime').textContent = `${minTime}-${maxTime} semanas`;
+    document.getElementById('resultCost').textContent = `$${minCost.toLocaleString()} - $${maxCost.toLocaleString()}`;
+    
+    // Show result
+    calculatorForm.style.display = 'none';
+    calculatorResult.classList.add('active');
+});
+
+// Reset calculator
+calculatorReset.addEventListener('click', () => {
+    calculatorForm.reset();
+    calculatorResult.classList.remove('active');
+    calculatorForm.style.display = 'block';
+    
+    // Reset to step 1
+    calculatorSteps.forEach(step => step.classList.remove('active'));
+    currentStep = 1;
+    document.querySelector(`.calculator__step[data-step="${currentStep}"]`).classList.add('active');
+});
+
+// ========================================
+// 15. ENHANCED CONTACT FORM
+// ========================================
+
+const formSuccessClose = document.getElementById('formSuccessClose');
+
+if (formSuccessClose) {
+    formSuccessClose.addEventListener('click', () => {
+        const formSuccess = document.getElementById('formSuccess');
+        formSuccess.classList.remove('active');
+        formSuccess.style.display = 'none';
+        
+        // Reset and show form
+        const contactForm = document.getElementById('contactForm');
+        contactForm.reset();
+        contactForm.style.display = 'block';
+    });
+}
