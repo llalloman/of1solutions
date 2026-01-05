@@ -2,6 +2,10 @@
 name = "of1solutions"
 compatibility_date = "2025-01-01"
 
+# Workers AI Binding
+[ai]
+binding = "AI"
+
 # Static Assets Configuration
 [assets]
 directory = "."
