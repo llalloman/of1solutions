@@ -1234,8 +1234,8 @@ button {
 
 .footer__content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: var(--spacing-2xl);
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    gap: var(--spacing-xl);
     margin-bottom: var(--spacing-2xl);
     padding-bottom: var(--spacing-2xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
