@@ -983,6 +983,73 @@ button {
     color: var(--color-primary);
 }
 
+/* Remote Culture Section */
+.remote-culture {
+    background: linear-gradient(135deg, #0078D4 0%, #2DCCD3 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-white);
+}
+
+.remote-culture__header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.remote-culture__icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remote-culture__icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--color-white);
+}
+
+.remote-culture__title {
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+    margin: 0;
+}
+
+.remote-culture__description {
+    font-size: var(--fs-base);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.95;
+}
+
+.remote-culture__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.remote-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all var(--transition-base);
+}
+
+.remote-badge:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
 .mission-vision__text {
     color: var(--color-gray-dark);
     line-height: 1.7;
@@ -1706,6 +1773,33 @@ button {
         grid-template-columns: 1fr;
     }
     
+    .remote-culture {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .remote-culture__header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .remote-culture__title {
+        font-size: var(--fs-xl);
+    }
+    
+    .remote-culture__description {
+        font-size: var(--fs-sm);
+    }
+    
+    .remote-culture__badges {
+        justify-content: center;
+    }
+    
+    .remote-badge {
+        font-size: var(--fs-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
     .values__grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1742,6 +1836,19 @@ button {
     
     .hero__title {
         font-size: var(--fs-3xl);
+    }
+    
+    .remote-culture {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .remote-culture__title {
+        font-size: var(--fs-lg);
+    }
+    
+    .remote-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.6rem;
     }
     
     .values__grid {
