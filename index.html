@@ -39,6 +39,7 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
                     <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#facturacion" class="nav__link nav__link--product">FacturaOf1</a></li>
                     <li class="nav__item"><a href="#casos" class="nav__link">Casos de Éxito</a></li>
                     <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
                 </ul>
@@ -93,8 +94,80 @@
                 </div>
             </div>
             <div class="hero__image">
-                <div class="hero__logo-showcase">
-                    <img src="assets/logo-completo.png" alt="OF1 SOLUTIONS - Logo Completo" class="hero__logo-full">
+                <div class="hero__dashboard" aria-hidden="true">
+                    <div class="dash-card">
+                        <div class="dash-card__chrome">
+                            <div class="dash-dots"><span></span><span></span><span></span></div>
+                            <span class="dash-url">facturacion.of1.ec</span>
+                            <span class="dash-sri">✓ SRI</span>
+                        </div>
+                        <div class="dash-card__body">
+                            <div class="dash-stats">
+                                <div class="dash-stat">
+                                    <div class="dash-stat__icon dash-stat__icon--green">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                    </div>
+                                    <div class="dash-stat__value">$1,842</div>
+                                    <div class="dash-stat__label">Ventas hoy</div>
+                                </div>
+                                <div class="dash-stat">
+                                    <div class="dash-stat__icon dash-stat__icon--blue">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    </div>
+                                    <div class="dash-stat__value">38</div>
+                                    <div class="dash-stat__label">Facturas</div>
+                                </div>
+                                <div class="dash-stat">
+                                    <div class="dash-stat__icon dash-stat__icon--purple">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                                    </div>
+                                    <div class="dash-stat__value">142</div>
+                                    <div class="dash-stat__label">Documentos</div>
+                                </div>
+                            </div>
+                            <div class="dash-chart">
+                                <div class="dash-chart__header">
+                                    <span class="dash-chart__title">Ventas — últimos 7 días</span>
+                                    <span class="dash-chart__growth">▲ 18.4%</span>
+                                </div>
+                                <div class="dash-chart__bars">
+                                    <div class="dash-bar" style="height:40%"></div>
+                                    <div class="dash-bar" style="height:65%"></div>
+                                    <div class="dash-bar" style="height:45%"></div>
+                                    <div class="dash-bar" style="height:80%"></div>
+                                    <div class="dash-bar" style="height:55%"></div>
+                                    <div class="dash-bar" style="height:90%"></div>
+                                    <div class="dash-bar dash-bar--active" style="height:75%"></div>
+                                </div>
+                            </div>
+                            <div class="dash-invoices">
+                                <p class="dash-invoices__heading">Facturas recientes</p>
+                                <div class="dash-invoice">
+                                    <span class="dash-invoice__name">Tienda La Esperanza</span>
+                                    <span class="dash-invoice__amount">$245.00</span>
+                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
+                                </div>
+                                <div class="dash-invoice">
+                                    <span class="dash-invoice__name">Ferretería Andina</span>
+                                    <span class="dash-invoice__amount">$89.50</span>
+                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
+                                </div>
+                                <div class="dash-invoice">
+                                    <span class="dash-invoice__name">Minimarket El Sol</span>
+                                    <span class="dash-invoice__amount">$512.30</span>
+                                    <span class="dash-badge dash-badge--pending">Pendiente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-float dash-float--sri">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Conectado al SRI
+                    </div>
+                    <div class="dash-float dash-float--free">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        30 días gratis
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,6 +237,214 @@
                     </div>
                     <h3 class="service-card__title">Infraestructura y Despliegue Escalable</h3>
                     <p class="service-card__description">Diseñamos e implementamos infraestructuras cloud robustas y escalables que crecen junto con tu empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FacturaOf1 Product Showcase -->
+    <section class="product" id="facturacion">
+        <div class="container">
+            <div class="product__header">
+                <span class="product__tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Producto SaaS
+                </span>
+                <h2 class="product__title">FacturaOf1</h2>
+                <p class="product__subtitle">Sistema de facturación electrónica aprobado por el SRI. Emite comprobantes, controla inventario y gestiona ventas desde un solo lugar.</p>
+            </div>
+
+            <div class="product__grid">
+                <!-- Left: features + pricing + CTA -->
+                <div class="product__content">
+                    <div class="product__features">
+                        <div class="product__feature">
+                            <div class="product__feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            </div>
+                            <div>
+                                <h4>Facturación electrónica SRI</h4>
+                                <p>Facturas, notas de crédito, retenciones y guías de remisión. Autorización en segundos.</p>
+                            </div>
+                        </div>
+                        <div class="product__feature">
+                            <div class="product__feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Control de inventario</h4>
+                                <p>Stock en tiempo real, bodegas múltiples y alertas de bajo inventario.</p>
+                            </div>
+                        </div>
+                        <div class="product__feature">
+                            <div class="product__feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                            </div>
+                            <div>
+                                <h4>Punto de venta (POS)</h4>
+                                <p>Interfaz de cobro rápida. Ideal para tiendas, minimarkets y restaurants.</p>
+                            </div>
+                        </div>
+                        <div class="product__feature">
+                            <div class="product__feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                            </div>
+                            <div>
+                                <h4>Reportes y métricas</h4>
+                                <p>Ventas por período, productos top e indicadores clave en tiempo real.</p>
+                            </div>
+                        </div>
+                        <div class="product__feature">
+                            <div class="product__feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            </div>
+                            <div>
+                                <h4>Multiempresa</h4>
+                                <p>Administra varias razones sociales desde una sola cuenta.</p>
+                            </div>
+                        </div>
+                        <div class="product__feature">
+                            <div class="product__feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                            </div>
+                            <div>
+                                <h4>Seguro y en la nube</h4>
+                                <p>Accede desde cualquier dispositivo. Backups automáticos diarios.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini pricing -->
+                    <div class="product__pricing">
+                        <div class="product__price-card">
+                            <span class="product__price-name">Prueba</span>
+                            <span class="product__price-amount">Gratis</span>
+                            <span class="product__price-note">30 días</span>
+                        </div>
+                        <div class="product__price-card product__price-card--highlight">
+                            <span class="product__price-name">Básico</span>
+                            <span class="product__price-amount">$12.99</span>
+                            <span class="product__price-note">/mes</span>
+                        </div>
+                        <div class="product__price-card">
+                            <span class="product__price-name">Profesional</span>
+                            <span class="product__price-amount">$24.99</span>
+                            <span class="product__price-note">/mes</span>
+                        </div>
+                        <div class="product__price-card">
+                            <span class="product__price-name">Empresarial</span>
+                            <span class="product__price-amount">$49.99</span>
+                            <span class="product__price-note">/mes</span>
+                        </div>
+                    </div>
+
+                    <div class="product__cta">
+                        <a href="https://facturacion.of1.ec/registro" target="_blank" rel="noopener" class="btn btn--cyan btn--large">
+                            <span>Probar gratis 30 días</span>
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </a>
+                        <a href="https://facturacion.of1.ec" target="_blank" rel="noopener" class="btn btn--outline-white btn--large">
+                            <span>Conocer más</span>
+                        </a>
+                    </div>
+                    <p class="product__note">Sin tarjeta de crédito · Cancela cuando quieras · Precios + IVA</p>
+                </div>
+
+                <!-- Right: dashboard mockup -->
+                <div class="product__preview">
+                    <div class="dash-card">
+                        <div class="dash-card__chrome">
+                            <div class="dash-dots"><span></span><span></span><span></span></div>
+                            <span class="dash-url">facturacion.of1.ec</span>
+                            <span class="dash-sri">✓ SRI</span>
+                        </div>
+                        <div class="dash-card__body">
+                            <div class="dash-stats">
+                                <div class="dash-stat">
+                                    <div class="dash-stat__icon dash-stat__icon--green">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                    </div>
+                                    <div class="dash-stat__value">$1,842</div>
+                                    <div class="dash-stat__label">Ventas hoy</div>
+                                </div>
+                                <div class="dash-stat">
+                                    <div class="dash-stat__icon dash-stat__icon--blue">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    </div>
+                                    <div class="dash-stat__value">38</div>
+                                    <div class="dash-stat__label">Facturas</div>
+                                </div>
+                                <div class="dash-stat">
+                                    <div class="dash-stat__icon dash-stat__icon--purple">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+                                    </div>
+                                    <div class="dash-stat__value">142</div>
+                                    <div class="dash-stat__label">Documentos</div>
+                                </div>
+                            </div>
+                            <div class="dash-chart">
+                                <div class="dash-chart__header">
+                                    <span class="dash-chart__title">Ventas — últimos 7 días</span>
+                                    <span class="dash-chart__growth">▲ 18.4%</span>
+                                </div>
+                                <div class="dash-chart__bars">
+                                    <div class="dash-bar" style="height:40%"></div>
+                                    <div class="dash-bar" style="height:65%"></div>
+                                    <div class="dash-bar" style="height:45%"></div>
+                                    <div class="dash-bar" style="height:80%"></div>
+                                    <div class="dash-bar" style="height:55%"></div>
+                                    <div class="dash-bar" style="height:90%"></div>
+                                    <div class="dash-bar dash-bar--active" style="height:75%"></div>
+                                </div>
+                            </div>
+                            <div class="dash-invoices">
+                                <p class="dash-invoices__heading">Facturas recientes</p>
+                                <div class="dash-invoice">
+                                    <span class="dash-invoice__name">Tienda La Esperanza</span>
+                                    <span class="dash-invoice__amount">$245.00</span>
+                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
+                                </div>
+                                <div class="dash-invoice">
+                                    <span class="dash-invoice__name">Ferretería Andina</span>
+                                    <span class="dash-invoice__amount">$89.50</span>
+                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
+                                </div>
+                                <div class="dash-invoice">
+                                    <span class="dash-invoice__name">Minimarket El Sol</span>
+                                    <span class="dash-invoice__amount">$512.30</span>
+                                    <span class="dash-badge dash-badge--pending">Pendiente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash-float dash-float--sri">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Conectado al SRI
+                    </div>
+                    <div class="dash-float dash-float--free">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        30 días gratis
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust bar -->
+            <div class="product__trust">
+                <div class="product__trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Aprobado por el SRI
+                </div>
+                <div class="product__trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    Datos cifrados
+                </div>
+                <div class="product__trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Soporte incluido
+                </div>
+                <div class="product__trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="23 4 23 8 19 8"/><polyline points="1 20 1 16 5 16"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+                    Actualizaciones incluidas
                 </div>
             </div>
         </div>
@@ -639,6 +920,7 @@
                     <ul class="footer__list">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#facturacion">FacturaOf1</a></li>
                         <li><a href="#soluciones">Soluciones</a></li>
                         <li><a href="#casos">Casos de Éxito</a></li>
                     </ul>
