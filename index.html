@@ -3,1109 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OF1 SOLUTIONS - No vendemos horas de programación, entregamos soluciones terminadas en tiempo récord. ERP, gestión de torneos, gimnasios. Empresa SAS en Ecuador.">
-    <meta name="keywords" content="ERP Ecuador, facturación electrónica SRI, software para gimnasios, ligas deportivas, desarrollo software empresa Ecuador, SaaS Ecuador">
-    <meta name="author" content="OF1 SOLUTIONS">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="OF1 Solutions desarrolla software a medida, ERP, automatización, inteligencia artificial, facturación electrónica y firma electrónica para empresas en Ecuador.">
+    <meta name="keywords" content="Desarrollo de software Ecuador, Empresa de software Ecuador, ERP Ecuador, Facturación electrónica Ecuador, Firma electrónica Ecuador, Automatización empresarial Ecuador, Inteligencia artificial para empresas Ecuador">
+    <meta name="author" content="OF1 Solutions">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="OF1 SOLUTIONS - Soluciones terminadas, no promesas">
-    <meta property="og:description" content="La IA nos hace rápidos. Nuestra experiencia nos hace expertos. ERP, LigaPro y Smart Gym listos para tu negocio.">
-    
-    <title>OF1 SOLUTIONS - Soluciones de Software Terminadas para tu Negocio | Ecuador</title>
-    
-    <!-- Google Fonts -->
+    <meta property="og:title" content="OF1 Solutions - Desarrollo de software, IA, automatización y ERP en Ecuador">
+    <meta property="og:description" content="Soluciones tecnológicas para empresas: software a medida, inteligencia artificial, automatización, ERP, facturación electrónica y firma electrónica.">
+    <title>OF1 Solutions | Desarrollo de Software, IA, Automatización y ERP en Ecuador</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-    <!-- Header -->
     <header class="header" id="header">
         <div class="container header__container">
             <div class="header__logo">
                 <a href="#inicio">
-                    <img src="assets/logo.png" alt="OF1 SOLUTIONS Logo" class="logo-image">
+                    <img src="assets/logo.png" alt="OF1 Solutions" class="logo-image">
                 </a>
             </div>
-            
             <nav class="nav" id="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
-                    <li class="nav__item"><a href="#productos" class="nav__link">Productos</a></li>
-                    <li class="nav__item"><a href="#facturacion" class="nav__link nav__link--product">FacturaOf1</a></li>
-                    <li class="nav__item"><a href="#comparativa" class="nav__link">Comparativa</a></li>
-                    <li class="nav__item"><a href="#nosotros" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#servicios" class="nav__link">Soluciones</a></li>
+                    <li class="nav__item"><a href="#erp" class="nav__link">ERP</a></li>
+                    <li class="nav__item"><a href="#software" class="nav__link">Software</a></li>
+                    <li class="nav__item"><a href="#ia" class="nav__link">IA</a></li>
                     <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
                 </ul>
             </nav>
-            
-            <a href="#contacto" class="btn btn--primary btn--header">Contáctanos</a>
-            
-            <!-- Mobile Menu Toggle -->
-            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+            <a href="#contacto" class="btn btn--primary btn--header">Solicitar asesoría</a>
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir navegación">
                 <span class="nav__toggle-icon"></span>
             </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="container hero__container">
-            <div class="hero__content">
-                <div class="hero__badge">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                        <circle cx="8" cy="8" r="7" stroke-width="2"/>
-                        <path d="M5 8l2 2 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>La IA nos hace rápidos &mdash; Nuestra experiencia nos hace expertos</span>
-                </div>
-                <h1 class="hero__title">No vendemos horas de programación.<br>Entregamos soluciones terminadas.</h1>
-                <p class="hero__subtitle">Implementamos en semanas lo que otros tardan meses. Usamos IA de forma estratégica para reducir costos y tiempos sin sacrificar calidad. 16+ años de experiencia respaldan cada línea de código.</p>
-                <div class="hero__cta">
-                    <a href="#productos" class="btn btn--primary btn--large">
-                        <span>Ver nuestros productos</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <main>
+        <section class="hero hero--corporate" id="inicio">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                            <circle cx="8" cy="8" r="7" stroke-width="2"/>
+                            <path d="M5 8l2 2 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </a>
-                    <a href="#contacto" class="btn btn--secondary btn--large">
-                        <span>Solicitar demostración</span>
-                    </a>
+                        <span>Empresa tecnológica ecuatoriana para transformación digital B2B</span>
+                    </div>
+                    <h1 class="hero__title">Desarrollamos soluciones tecnológicas que impulsan el crecimiento de tu empresa.</h1>
+                    <p class="hero__subtitle">Software a medida, Inteligencia Artificial, Automatización, ERP y Facturación Electrónica para negocios en Ecuador.</p>
+                    <div class="hero__cta">
+                        <a href="#contacto" class="btn btn--primary btn--large">
+                            <span>Solicitar Asesoría</span>
+                        </a>
+                        <a href="https://wa.me/593983904993?text=Hola,%20quiero%20agendar%20una%20reuni%C3%B3n%20con%20OF1%20Solutions" target="_blank" rel="noopener" class="btn btn--secondary btn--large">
+                            <span>Agendar Reunión</span>
+                        </a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat-item">
+                            <div class="stat-number">16+</div>
+                            <div class="stat-label">Años de experiencia tecnológica</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Líneas de solución empresarial</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">EC</div>
+                            <div class="stat-label">Soluciones adaptadas a Ecuador</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero__stats">
-                    <div class="stat-item">
-                        <div class="stat-number">16+</div>
-                        <div class="stat-label">Años de experiencia</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">MVPs listos para usar</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">8x</div>
-                        <div class="stat-label">Más rápido que el mercado</div>
+                <div class="hero__image">
+                    <div class="tech-panel" aria-label="Ecosistema tecnológico OF1 Solutions">
+                        <div class="tech-panel__header">
+                            <span>OF1 Solutions</span>
+                            <strong>Digital Business Stack</strong>
+                        </div>
+                        <div class="tech-panel__grid">
+                            <div><span>Software</span><strong>Sistemas empresariales</strong></div>
+                            <div><span>IA</span><strong>Automatización inteligente</strong></div>
+                            <div><span>ERP</span><strong>FacturaOF1 ERP</strong></div>
+                            <div><span>BI</span><strong>Dashboards y reportes</strong></div>
+                        </div>
+                        <div class="tech-panel__flow">
+                            <span>Procesos</span>
+                            <span>Integraciones</span>
+                            <span>Datos</span>
+                            <span>Decisiones</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero__image">
-                <div class="hero__dashboard" aria-hidden="true">
-                    <div class="dash-card">
-                        <div class="dash-card__chrome">
-                            <div class="dash-dots"><span></span><span></span><span></span></div>
-                            <span class="dash-url">facturaof1.of1solutions.com</span>
-                            <span class="dash-sri">✓ SRI</span>
-                        </div>
-                        <div class="dash-card__body">
-                            <div class="dash-stats">
-                                <div class="dash-stat">
-                                    <div class="dash-stat__icon dash-stat__icon--green">
-                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
-                                    </div>
-                                    <div class="dash-stat__value">$1,842</div>
-                                    <div class="dash-stat__label">Ventas hoy</div>
-                                </div>
-                                <div class="dash-stat">
-                                    <div class="dash-stat__icon dash-stat__icon--blue">
-                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                    </div>
-                                    <div class="dash-stat__value">38</div>
-                                    <div class="dash-stat__label">Facturas</div>
-                                </div>
-                                <div class="dash-stat">
-                                    <div class="dash-stat__icon dash-stat__icon--purple">
-                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-                                    </div>
-                                    <div class="dash-stat__value">142</div>
-                                    <div class="dash-stat__label">Documentos</div>
-                                </div>
-                            </div>
-                            <div class="dash-chart">
-                                <div class="dash-chart__header">
-                                    <span class="dash-chart__title">Ventas — últimos 7 días</span>
-                                    <span class="dash-chart__growth">▲ 18.4%</span>
-                                </div>
-                                <div class="dash-chart__bars">
-                                    <div class="dash-bar" style="height:40%"></div>
-                                    <div class="dash-bar" style="height:65%"></div>
-                                    <div class="dash-bar" style="height:45%"></div>
-                                    <div class="dash-bar" style="height:80%"></div>
-                                    <div class="dash-bar" style="height:55%"></div>
-                                    <div class="dash-bar" style="height:90%"></div>
-                                    <div class="dash-bar dash-bar--active" style="height:75%"></div>
-                                </div>
-                            </div>
-                            <div class="dash-invoices">
-                                <p class="dash-invoices__heading">Facturas recientes</p>
-                                <div class="dash-invoice">
-                                    <span class="dash-invoice__name">Tienda La Esperanza</span>
-                                    <span class="dash-invoice__amount">$245.00</span>
-                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
-                                </div>
-                                <div class="dash-invoice">
-                                    <span class="dash-invoice__name">Ferretería Andina</span>
-                                    <span class="dash-invoice__amount">$89.50</span>
-                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
-                                </div>
-                                <div class="dash-invoice">
-                                    <span class="dash-invoice__name">Minimarket El Sol</span>
-                                    <span class="dash-invoice__amount">$512.30</span>
-                                    <span class="dash-badge dash-badge--pending">Pendiente</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dash-float dash-float--sri">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        Conectado al SRI
-                    </div>
-                    <div class="dash-float dash-float--free">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        30 días gratis
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero__scroll">
-            <a href="#productos" class="scroll-indicator">
-                <span class="scroll-indicator__text">Ver más</span>
-                <span class="scroll-indicator__arrow"></span>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!-- Products Suite Section -->
-    <section class="services" id="productos">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Suite de Soluciones para tu Negocio</h2>
-                <p class="section-subtitle">Sistemas terminados y operativos. Sin esperar meses ni pagar de más por lo que otras empresas aún "están desarrollando".</p>
-            </div>
-            
-            <div class="services__grid products-grid">
-                <!-- Product 1: ERP Integral -->
-                <div class="service-card product-card product-card--featured">
-                    <div class="product-card__badge">Más popular</div>
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-card__title">ERP Integral</h3>
-                    <p class="service-card__description">Controla tu negocio completo desde un solo lugar. Inventario en tiempo real, compras, ventas, punto de venta y <strong>Facturación Electrónica homologada por el SRI</strong>.</p>
-                    <ul class="product-card__features">
-                        <li>✓ Inventario y control de bodegas</li>
-                        <li>✓ Compras y gestión de proveedores</li>
-                        <li>✓ Ventas y POS táctil</li>
-                        <li>✓ Facturación electrónica SRI</li>
-                        <li>✓ Reportes y métricas en tiempo real</li>
-                    </ul>
-                    <p class="product-card__target">Ideal para: tiendas, distribuidoras, minimarkets, ferreterías</p>
-                    <a href="#facturacion" class="btn btn--primary">
-                        <span>Ver ERP / FacturaOf1</span>
-                    </a>
+        <section class="services" id="servicios">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">¿Qué hacemos?</h2>
+                    <p class="section-subtitle">Un ecosistema de servicios y productos para digitalizar, automatizar y escalar empresas.</p>
                 </div>
-                
-                <!-- Product 2: LigaPro Barrial -->
-                <div class="service-card product-card">
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 8l1.5 3h3l-2.5 2 1 3L12 14l-3 2 1-3-2.5-2h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-card__title">LigaPro Barrial</h3>
-                    <p class="service-card__description">Gestiona torneos deportivos como un profesional. Tablas de posiciones automáticas, estadísticas de jugadores, resultados en tiempo real y mucho más.</p>
-                    <ul class="product-card__features">
-                        <li>✓ Gestión de equipos y jugadores</li>
-                        <li>✓ Fixture y calendario automático</li>
-                        <li>✓ Tabla de posiciones en vivo</li>
-                        <li>✓ Estadísticas individuales y equipos</li>
-                        <li>✓ Portal público del torneo</li>
-                    </ul>
-                    <p class="product-card__target">Ideal para: ligas barriales, clubes deportivos, organizadores</p>
-                    <a href="#contacto" class="btn btn--secondary">
-                        <span>Solicitar demostración</span>
+                <div class="services__grid solution-grid">
+                    <a href="#software" class="service-card solution-card">
+                        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6" stroke-width="2" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke-width="2" stroke-linecap="round"/></svg></div>
+                        <h3 class="service-card__title">Desarrollo de Software</h3>
+                        <p class="service-card__description">Sistemas empresariales, portales, integraciones y plataformas a medida.</p>
                     </a>
-                </div>
-                
-                <!-- Product 3: Smart Gym -->
-                <div class="service-card product-card product-card--launch">
-                    <div class="product-card__badge product-card__badge--launch">En lanzamiento</div>
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.5 6.5h11M6.5 17.5h11M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <rect x="2" y="9" width="3" height="6" rx="1" stroke="currentColor" stroke-width="2"/>
-                            <rect x="19" y="9" width="3" height="6" rx="1" stroke="currentColor" stroke-width="2"/>
-                            <rect x="5" y="5" width="3" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
-                            <rect x="16" y="5" width="3" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-card__title">Smart Gym</h3>
-                    <p class="service-card__description">Administra tu gimnasio sin papeles ni planillas. Membresías, cobros automáticos, control de acceso y seguimiento de tus clientes en un solo sistema.</p>
-                    <ul class="product-card__features">
-                        <li>✓ Gestión de membresías y planes</li>
-                        <li>✓ Cobros y renovaciones automáticas</li>
-                        <li>✓ Control de asistencia y acceso</li>
-                        <li>✓ Notificaciones de vencimiento</li>
-                        <li>✓ Reportes de retención y facturación</li>
-                    </ul>
-                    <p class="product-card__target">Ideal para: gimnasios, academias deportivas, centros de fitness</p>
-                    <a href="#contacto" class="btn btn--secondary">
-                        <span>Quiero ser de los primeros</span>
+                    <a href="#ia" class="service-card solution-card">
+                        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke-width="2"/></svg></div>
+                        <h3 class="service-card__title">Inteligencia Artificial</h3>
+                        <p class="service-card__description">Chatbots, asistentes, análisis de datos y automatización con IA.</p>
+                    </a>
+                    <a href="#ia" class="service-card solution-card">
+                        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M13 2L3 14h8l-1 8 11-14h-8l0-6z" stroke-width="2" stroke-linejoin="round"/></svg></div>
+                        <h3 class="service-card__title">Automatización de Procesos</h3>
+                        <p class="service-card__description">Flujos operativos, documentos, WhatsApp, alertas e integraciones.</p>
+                    </a>
+                    <a href="#software" class="service-card solution-card">
+                        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="7" y="2" width="10" height="20" rx="2" stroke-width="2"/><path d="M11 18h2" stroke-width="2" stroke-linecap="round"/></svg></div>
+                        <h3 class="service-card__title">Aplicaciones Móviles</h3>
+                        <p class="service-card__description">Apps para clientes, equipos comerciales, operaciones y servicios.</p>
+                    </a>
+                    <a href="#erp" class="service-card solution-card solution-card--featured">
+                        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4z" stroke-width="2"/><path d="M3.3 7L12 12l8.7-5" stroke-width="2"/></svg></div>
+                        <h3 class="service-card__title">FacturaOF1 ERP</h3>
+                        <p class="service-card__description">ERP con facturación electrónica SRI, POS, inventario, cartera y reportes.</p>
+                    </a>
+                    <a href="https://facturaof1.of1solutions.com/solicitar-firma-electronica" target="_blank" rel="noopener" class="service-card solution-card solution-card--secondary">
+                        <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round"/><path d="M4 21h16" stroke-width="2" stroke-linecap="round"/></svg></div>
+                        <h3 class="service-card__title">Obtén tu Firma Electrónica</h3>
+                        <p class="service-card__description">Solicitud de firmas electrónicas integrada al flujo de FacturaOF1 ERP.</p>
                     </a>
                 </div>
             </div>
+        </section>
 
-            <div class="products-cta-bar">
-                <p class="products-cta-bar__text">¿Necesitas algo más específico? También desarrollamos soluciones a medida con entrega en tiempo récord.</p>
-                <a href="#contacto" class="btn btn--primary">
-                    <span>Hablar con un experto</span>
-                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FacturaOf1 Product Showcase -->
-    <section class="product" id="facturacion">
-        <div class="container">
-            <div class="product__header">
-                <span class="product__tag">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                    Producto SaaS &mdash; Operativo en Ecuador
-                </span>
-                <h2 class="product__title">FacturaOf1 &mdash; ERP con Facturación Electrónica</h2>
-                <p class="product__subtitle">La alternativa inteligente a los sistemas caros y complejos del mercado ecuatoriano. Todo lo que necesita tu negocio: facturas autorizadas por el SRI, inventario, ventas y POS &mdash; <strong>sin pagar fortunas ni esperar meses para implementar</strong>.</p>
-            </div>
-
-            <div class="product__grid">
-                <!-- Left: features + pricing + CTA -->
-                <div class="product__content">
-                    <div class="product__features">
-                        <div class="product__feature">
-                            <div class="product__feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            </div>
-                            <div>
-                                <h4>Facturación electrónica SRI</h4>
-                                <p>Facturas, notas de crédito, retenciones y guías de remisión. Autorización en segundos. Sin costos por comprobante.</p>
-                            </div>
+        <section class="product product--erp" id="erp">
+            <div class="container">
+                <div class="split-section">
+                    <div>
+                        <span class="section-kicker">FacturaOF1 ERP</span>
+                        <h2 class="section-title section-title--left">Controla tu negocio desde una sola plataforma</h2>
+                        <p class="section-subtitle section-subtitle--left">FacturaOF1 ERP integra operación, ventas, inventario y facturación electrónica SRI para empresas que necesitan control y visibilidad.</p>
+                        <div class="feature-cloud">
+                            <span>Facturación Electrónica SRI</span>
+                            <span>POS</span>
+                            <span>Inventario</span>
+                            <span>Clientes</span>
+                            <span>Cartera</span>
+                            <span>Compras</span>
+                            <span>Reportes</span>
+                            <span>Dashboard Gerencial</span>
+                            <span>Solicitud de Firma Electrónica</span>
                         </div>
-                        <div class="product__feature">
-                            <div class="product__feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-                            </div>
-                            <div>
-                                <h4>Control de inventario</h4>
-                                <p>Stock en tiempo real, bodegas múltiples y alertas de bajo inventario.</p>
-                            </div>
-                        </div>
-                        <div class="product__feature">
-                            <div class="product__feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-                            </div>
-                            <div>
-                                <h4>Punto de venta (POS)</h4>
-                                <p>Interfaz de cobro rápida. Ideal para tiendas, minimarkets y restaurants.</p>
-                            </div>
-                        </div>
-                        <div class="product__feature">
-                            <div class="product__feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                            </div>
-                            <div>
-                                <h4>Reportes y métricas</h4>
-                                <p>Ventas por período, productos top e indicadores clave en tiempo real.</p>
-                            </div>
-                        </div>
-                        <div class="product__feature">
-                            <div class="product__feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                            </div>
-                            <div>
-                                <h4>Multiempresa</h4>
-                                <p>Administra varias razones sociales desde una sola cuenta.</p>
-                            </div>
-                        </div>
-                        <div class="product__feature">
-                            <div class="product__feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                            </div>
-                            <div>
-                                <h4>Seguro y en la nube</h4>
-                                <p>Accede desde cualquier dispositivo. Backups automáticos diarios.</p>
-                            </div>
-                        </div>
+                        <a href="https://facturaof1.of1solutions.com/" target="_blank" rel="noopener" class="btn btn--cyan btn--large">Solicitar Demostración</a>
                     </div>
-
-                    <!-- Mini pricing -->
-                    <div class="product__pricing">
-                        <div class="product__price-card">
-                            <span class="product__price-name">Prueba</span>
-                            <span class="product__price-amount">Gratis</span>
-                            <span class="product__price-note">30 días</span>
+                    <div class="erp-card">
+                        <div class="erp-card__top">
+                            <strong>Dashboard Gerencial</strong>
+                            <span>FacturaOF1 ERP</span>
                         </div>
-                        <div class="product__price-card product__price-card--highlight">
-                            <span class="product__price-name">Básico</span>
-                            <span class="product__price-amount">$12.99</span>
-                            <span class="product__price-note">/mes</span>
+                        <div class="erp-card__metrics">
+                            <div><span>Ventas</span><strong>$18.4k</strong></div>
+                            <div><span>Facturas</span><strong>326</strong></div>
+                            <div><span>Stock crítico</span><strong>12</strong></div>
                         </div>
-                        <div class="product__price-card">
-                            <span class="product__price-name">Profesional</span>
-                            <span class="product__price-amount">$24.99</span>
-                            <span class="product__price-note">/mes</span>
-                        </div>
-                        <div class="product__price-card">
-                            <span class="product__price-name">Empresarial</span>
-                            <span class="product__price-amount">$49.99</span>
-                            <span class="product__price-note">/mes</span>
-                        </div>
-                    </div>
-
-                    <div class="product__cta">
-                        <a href="https://facturaof1.of1solutions.com/registro" target="_blank" rel="noopener" class="btn btn--cyan btn--large">
-                            <span>Probar gratis 30 días</span>
-                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                        </a>
-                        <a href="https://facturaof1.of1solutions.com" target="_blank" rel="noopener" class="btn btn--outline-white btn--large">
-                            <span>Conocer más</span>
-                        </a>
-                    </div>
-                    <p class="product__note">Sin tarjeta de crédito &middot; Sin lídmite de comprobantes &middot; Cancela cuando quieras &middot; Precios + IVA</p>
-                </div>
-
-                <!-- Right: dashboard mockup -->
-                <div class="product__preview">
-                    <div class="dash-card">
-                        <div class="dash-card__chrome">
-                            <div class="dash-dots"><span></span><span></span><span></span></div>
-                            <span class="dash-url">facturaof1.of1solutions.com</span>
-                            <span class="dash-sri">✓ SRI</span>
-                        </div>
-                        <div class="dash-card__body">
-                            <div class="dash-stats">
-                                <div class="dash-stat">
-                                    <div class="dash-stat__icon dash-stat__icon--green">
-                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
-                                    </div>
-                                    <div class="dash-stat__value">$1,842</div>
-                                    <div class="dash-stat__label">Ventas hoy</div>
-                                </div>
-                                <div class="dash-stat">
-                                    <div class="dash-stat__icon dash-stat__icon--blue">
-                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                    </div>
-                                    <div class="dash-stat__value">38</div>
-                                    <div class="dash-stat__label">Facturas</div>
-                                </div>
-                                <div class="dash-stat">
-                                    <div class="dash-stat__icon dash-stat__icon--purple">
-                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-                                    </div>
-                                    <div class="dash-stat__value">142</div>
-                                    <div class="dash-stat__label">Documentos</div>
-                                </div>
-                            </div>
-                            <div class="dash-chart">
-                                <div class="dash-chart__header">
-                                    <span class="dash-chart__title">Ventas — últimos 7 días</span>
-                                    <span class="dash-chart__growth">▲ 18.4%</span>
-                                </div>
-                                <div class="dash-chart__bars">
-                                    <div class="dash-bar" style="height:40%"></div>
-                                    <div class="dash-bar" style="height:65%"></div>
-                                    <div class="dash-bar" style="height:45%"></div>
-                                    <div class="dash-bar" style="height:80%"></div>
-                                    <div class="dash-bar" style="height:55%"></div>
-                                    <div class="dash-bar" style="height:90%"></div>
-                                    <div class="dash-bar dash-bar--active" style="height:75%"></div>
-                                </div>
-                            </div>
-                            <div class="dash-invoices">
-                                <p class="dash-invoices__heading">Facturas recientes</p>
-                                <div class="dash-invoice">
-                                    <span class="dash-invoice__name">Tienda La Esperanza</span>
-                                    <span class="dash-invoice__amount">$245.00</span>
-                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
-                                </div>
-                                <div class="dash-invoice">
-                                    <span class="dash-invoice__name">Ferretería Andina</span>
-                                    <span class="dash-invoice__amount">$89.50</span>
-                                    <span class="dash-badge dash-badge--ok">Autorizada</span>
-                                </div>
-                                <div class="dash-invoice">
-                                    <span class="dash-invoice__name">Minimarket El Sol</span>
-                                    <span class="dash-invoice__amount">$512.30</span>
-                                    <span class="dash-badge dash-badge--pending">Pendiente</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dash-float dash-float--sri">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        Conectado al SRI
-                    </div>
-                    <div class="dash-float dash-float--free">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                        30 días gratis
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trust bar -->
-            <div class="product__trust">
-                <div class="product__trust-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    Aprobado por el SRI
-                </div>
-                <div class="product__trust-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                    Datos cifrados
-                </div>
-                <div class="product__trust-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                    Soporte incluido
-                </div>
-                <div class="product__trust-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="23 4 23 8 19 8"/><polyline points="1 20 1 16 5 16"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
-                    Actualizaciones incluidas
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Positioning Section -->
-    <section class="ai-positioning" id="enfoque">
-        <div class="container">
-            <div class="ai-positioning__content">
-                <div class="ai-positioning__text">
-                    <div class="ai-badge">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        <span>Transparencia total sobre cómo trabajamos</span>
-                    </div>
-                    <h2 class="ai-positioning__title">¿Usamos IA? Sí, y es nuestra ventaja.</h2>
-                    <p class="ai-positioning__lead">No lo ocultamos — lo celebramos. Usamos inteligencia artificial de forma estratégica para hacer en días lo que otros tardan meses. Pero la IA es nuestra herramienta, no nuestro sustituto.</p>
-                    <p class="ai-positioning__body">Detrás de cada sistema que entregamos hay <strong>16+ años de experiencia real</strong> en negocios ecuatorianos. Sabemos qué necesita una ferretería, una distribuidora, una liga barrial o un gimnasio. Esa experiencia es lo que convierte una solución "rápida" en una solución <em>correcta</em>.</p>
-                    <div class="ai-positioning__pillars">
-                        <div class="ai-pillar">
-                            <div class="ai-pillar__icon">⚡</div>
-                            <div>
-                                <strong>Velocidad real</strong>
-                                <p>Entregamos en semanas, no en meses. Sin excusas.</p>
-                            </div>
-                        </div>
-                        <div class="ai-pillar">
-                            <div class="ai-pillar__icon">🎯</div>
-                            <div>
-                                <strong>Calidad garantizada</strong>
-                                <p>Cada solución se prueba y valida antes de entregarse.</p>
-                            </div>
-                        </div>
-                        <div class="ai-pillar">
-                            <div class="ai-pillar__icon">💰</div>
-                            <div>
-                                <strong>Precio justo</strong>
-                                <p>Eficiencia que se traduce en ahorro real para tu negocio.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ai-positioning__quote">
-                    <blockquote class="hero-quote">
-                        <p>"La IA nos hace rápidos.<br>Nuestra experiencia nos hace expertos.<br>Los dos juntos nos hacen<br><strong>la mejor opción del mercado.</strong>"</p>
-                        <footer>
-                            <span class="quote-author">Walter Molina</span>
-                            <span class="quote-role">Fundador & CEO, OF1 Solutions</span>
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Market Comparison Section -->
-    <section class="comparison" id="comparativa">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">OF1 Solutions vs. Desarrollo Tradicional</h2>
-                <p class="section-subtitle">Los números no mienten. Esta es la diferencia entre elegir el modelo inteligente y seguir pagando de más.</p>
-            </div>
-
-            <div class="comparison__table-wrap">
-                <table class="comparison__table">
-                    <thead>
-                        <tr>
-                            <th class="comparison__th comparison__th--factor">Factor</th>
-                            <th class="comparison__th comparison__th--traditional">Desarrollo Tradicional</th>
-                            <th class="comparison__th comparison__th--of1">OF1 Solutions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="comparison__td comparison__td--factor">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                                Tiempo de entrega
-                            </td>
-                            <td class="comparison__td comparison__td--bad">6 a 18 meses</td>
-                            <td class="comparison__td comparison__td--good">4 a 8 semanas ✓</td>
-                        </tr>
-                        <tr>
-                            <td class="comparison__td comparison__td--factor">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 7H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-                                Costo inicial
-                            </td>
-                            <td class="comparison__td comparison__td--bad">$15,000 – $80,000+</td>
-                            <td class="comparison__td comparison__td--good">Desde $29/mes ✓</td>
-                        </tr>
-                        <tr>
-                            <td class="comparison__td comparison__td--factor">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                Errores en producción
-                            </td>
-                            <td class="comparison__td comparison__td--bad">Frecuentes y costosos</td>
-                            <td class="comparison__td comparison__td--good">Validación continua ✓</td>
-                        </tr>
-                        <tr>
-                            <td class="comparison__td comparison__td--factor">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="23 4 23 8 19 8"/><path d="M20.49 15a9 9 0 11-.46-9.98"/></svg>
-                                Actualizaciones
-                            </td>
-                            <td class="comparison__td comparison__td--bad">Costo adicional</td>
-                            <td class="comparison__td comparison__td--good">Incluidas en el plan ✓</td>
-                        </tr>
-                        <tr>
-                            <td class="comparison__td comparison__td--factor">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                Soporte técnico
-                            </td>
-                            <td class="comparison__td comparison__td--bad">Por horas / extra</td>
-                            <td class="comparison__td comparison__td--good">Incluido en plan ✓</td>
-                        </tr>
-                        <tr>
-                            <td class="comparison__td comparison__td--factor">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg>
-                                Curva de aprendizaje
-                            </td>
-                            <td class="comparison__td comparison__td--bad">Alta — semanas de capacitación</td>
-                            <td class="comparison__td comparison__td--good">Interfaces intuitivas ✓</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="comparison__cta">
-                <p>¿Sigues pagando por un proceso lento y manual? Es momento de cambiar.</p>
-                <a href="#contacto" class="btn btn--primary btn--large">
-                    <span>Quiero el modelo inteligente</span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="cases" id="casos">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Resultados Reales</h2>
-                <p class="section-subtitle">Proyectos entregados con nuestro modelo de eficiencia. Menos tiempo, menos costo, más impacto.</p>
-            </div>
-            
-            <div class="cases__carousel">
-                <button class="carousel__button carousel__button--prev" aria-label="Anterior">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                
-                <div class="cases__track">
-                    <!-- Case 1 -->
-                    <div class="case-card">
-                        <div class="case-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="case-card__title">Sistema Web Más Rápido</h3>
-                        <p class="case-card__description">Optimizamos un sistema lento aumentando su velocidad en 75% y eliminando interrupciones.</p>
-                        <div class="case-card__metric">
-                            <span class="metric__number">75%</span>
-                            <span class="metric__label">Más rápido</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Case 2 -->
-                    <div class="case-card">
-                        <div class="case-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3 class="case-card__title">Infraestructura Moderna</h3>
-                        <p class="case-card__description">Migramos a la nube logrando 99.9% de disponibilidad y ahorrando 60% en costos.</p>
-                        <div class="case-card__metric">
-                            <span class="metric__number">99.9%</span>
-                            <span class="metric__label">Disponibilidad</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Case 3 -->
-                    <div class="case-card">
-                        <div class="case-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2v20M17 7H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="case-card__title">Automatización de Reportes</h3>
-                        <p class="case-card__description">Eliminamos procesos manuales ahorrando 120 horas al mes y reduciendo errores en 95%.</p>
-                        <div class="case-card__metric">
-                            <span class="metric__number">120h</span>
-                            <span class="metric__label">Ahorradas/mes</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Case 4 -->
-                    <div class="case-card">
-                        <div class="case-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="case-card__title">Experiencia Web Fluida</h3>
-                        <p class="case-card__description">Modernizamos la interfaz eliminando recargas de página, mejorando la experiencia de usuario.</p>
-                        <div class="case-card__metric">
-                            <span class="metric__number">80%</span>
-                            <span class="metric__label">Menos datos</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Case 5 -->
-                    <div class="case-card">
-                        <div class="case-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M8.5 3a4 4 0 100 8 4 4 0 000-8zM20 8v6M23 11h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="case-card__title">Sistema de Ventas Inteligente</h3>
-                        <p class="case-card__description">Distribución automática de clientes potenciales aumentó las ventas cerradas en 30%.</p>
-                        <div class="case-card__metric">
-                            <span class="metric__number">+30%</span>
-                            <span class="metric__label">Ventas</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Case 6 -->
-                    <div class="case-card">
-                        <div class="case-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="case-card__title">Cotizaciones Automáticas</h3>
-                        <p class="case-card__description">Sistema que genera presupuestos precisos en minutos, ganando 3 licitaciones importantes.</p>
-                        <div class="case-card__metric">
-                            <span class="metric__number">70%</span>
-                            <span class="metric__label">Menos tiempo</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="carousel__button carousel__button--next" aria-label="Siguiente">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="carousel__indicators">
-                <button class="indicator active" data-slide="0"></button>
-                <button class="indicator" data-slide="1"></button>
-                <button class="indicator" data-slide="2"></button>
-                <button class="indicator" data-slide="3"></button>
-                <button class="indicator" data-slide="4"></button>
-                <button class="indicator" data-slide="5"></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team" id="nosotros">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Quiénes somos</h2>
-                <p class="section-subtitle">Una empresa SAS ecuatoriana fundada en 2025 con más de 16 años de experiencia acumulada en desarrollo de software y negocios digitales</p>
-            </div>
-            
-            <div class="team__content">
-                <div class="team__profile">
-                    <div class="profile-card">
-                        <div class="profile-card__image">
-                            <img src="assets/walter-molina.jpeg" alt="Walter Molina - Fundador" loading="lazy">
-                        </div>
-                        <h3 class="profile-card__name">Walter Molina</h3>
-                        <p class="profile-card__role">Fundador & CEO</p>
-                        <p class="profile-card__bio">Líder tecnológico con más de 15 años de experiencia en desarrollo de software y transformación digital empresarial.</p>
-                        <a href="https://www.linkedin.com/in/walter-molina-c" class="profile-card__linkedin" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="team__mission">
-                    <div class="mission-vision">
-                        <div class="mission-vision__item">
-                            <h3 class="mission-vision__title">Misión</h3>
-                            <p class="mission-vision__text">Entregar soluciones de software terminadas y operativas en tiempo récord, usando inteligencia artificial de forma estratégica para reducir costos sin sacrificar calidad. Democratizamos el acceso a tecnología de primer nivel para empresas ecuatorianas.</p>
-                        </div>
-                        
-                        <div class="mission-vision__item">
-                            <h3 class="mission-vision__title">Visión</h3>
-                            <p class="mission-vision__text">Ser la empresa de referencia en Ecuador y Latinoamérica que rompió el modelo de desarrollo tradicional lento y costoso, demostrando que innovación + experiencia = resultados superiores.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="values">
-                        <h3 class="values__title">Nuestros Valores</h3>
-                        <div class="values__grid">
-                            <div class="value-item">
-                                <div class="value-item__icon">💡</div>
-                                <h4 class="value-item__title">Innovación</h4>
-                                <p class="value-item__text">Buscamos constantemente nuevas formas de resolver problemas</p>
-                            </div>
-                            <div class="value-item">
-                                <div class="value-item__icon">📈</div>
-                                <h4 class="value-item__title">Escalabilidad</h4>
-                                <p class="value-item__text">Diseñamos soluciones que crecen con tu negocio</p>
-                            </div>
-                            <div class="value-item">
-                                <div class="value-item__icon">🤝</div>
-                                <h4 class="value-item__title">Confianza</h4>
-                                <p class="value-item__text">Construimos relaciones de largo plazo basadas en resultados</p>
-                            </div>
-                            <div class="value-item">
-                                <div class="value-item__icon">⭐</div>
-                                <h4 class="value-item__title">Calidad</h4>
-                                <p class="value-item__text">Comprometidos con la excelencia en cada proyecto</p>
-                            </div>
+                        <div class="erp-card__bars">
+                            <span style="height: 45%"></span>
+                            <span style="height: 70%"></span>
+                            <span style="height: 52%"></span>
+                            <span style="height: 86%"></span>
+                            <span style="height: 64%"></span>
+                            <span style="height: 92%"></span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Demo CTA Banner -->
-    <section class="demo-cta">
-        <div class="container">
-            <div class="demo-cta__content">
-                <div class="demo-cta__text">
-                    <h2 class="demo-cta__title">Los sistemas ya están listos.<br>Solo falta que los conozcas.</h2>
-                    <p class="demo-cta__subtitle">Agenda una demostración en vivo de cualquiera de nuestros productos. Sin compromisos, sin letra pequeña. Solo resultados reales.</p>
-                    <div class="demo-cta__options">
-                        <a href="https://facturaof1.of1solutions.com/registro" target="_blank" rel="noopener" class="demo-option">
-                            <span class="demo-option__icon">📊</span>
-                            <div>
-                                <strong>ERP / FacturaOf1</strong>
-                                <small>Prueba gratis 30 días</small>
-                            </div>
-                        </a>
-                        <a href="https://wa.me/593983904993?text=Hola,%20quiero%20una%20demo%20de%20LigaPro%20Barrial" target="_blank" rel="noopener" class="demo-option">
-                            <span class="demo-option__icon">⚽</span>
-                            <div>
-                                <strong>LigaPro Barrial</strong>
-                                <small>Demo en vivo por WhatsApp</small>
-                            </div>
-                        </a>
-                        <a href="https://wa.me/593983904993?text=Hola,%20quiero%20info%20de%20Smart%20Gym" target="_blank" rel="noopener" class="demo-option">
-                            <span class="demo-option__icon">🏥</span>
-                            <div>
-                                <strong>Smart Gym</strong>
-                                <small>Sé de los primeros</small>
-                            </div>
-                        </a>
+        <section class="section-block" id="software">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Desarrollo de software</span>
+                    <h2 class="section-title">Soluciones a medida para procesos reales de negocio</h2>
+                    <p class="section-subtitle">Diseñamos y construimos sistemas que se adaptan a la operación de tu empresa, no al revés.</p>
+                </div>
+                <div class="capability-grid">
+                    <div class="capability-card"><h3>Sistemas empresariales</h3><p>Plataformas internas para ventas, operaciones, logística, finanzas y gestión administrativa.</p></div>
+                    <div class="capability-card"><h3>Portales web</h3><p>Experiencias digitales para clientes, proveedores, equipos comerciales y procesos de autoservicio.</p></div>
+                    <div class="capability-card"><h3>Aplicaciones móviles</h3><p>Apps para operación en campo, atención al cliente, seguimiento y captura de información.</p></div>
+                    <div class="capability-card"><h3>Integraciones</h3><p>Conectamos sistemas, APIs, ERP, facturación, WhatsApp, pasarelas de pago y bases de datos.</p></div>
+                    <div class="capability-card"><h3>Dashboards</h3><p>Paneles para monitorear indicadores, ventas, productividad, cartera e información gerencial.</p></div>
+                    <div class="capability-card"><h3>Soluciones a medida</h3><p>Producto digital, SaaS interno o automatización específica para tu modelo operativo.</p></div>
+                </div>
+                <div class="center-cta">
+                    <a href="#form-software" class="btn btn--primary btn--large">Cuéntanos tu proyecto</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block section-block--tinted" id="ia">
+            <div class="container">
+                <div class="split-section split-section--reverse">
+                    <div class="automation-panel">
+                        <div>Chatbot empresarial <span>WhatsApp / Web</span></div>
+                        <div>Automatización documental <span>Procesos internos</span></div>
+                        <div>Dashboard inteligente <span>Datos para decidir</span></div>
+                        <div>Atención al cliente con IA <span>Respuesta y seguimiento</span></div>
+                    </div>
+                    <div>
+                        <span class="section-kicker">IA y automatización</span>
+                        <h2 class="section-title section-title--left">Automatiza tareas, responde más rápido y toma mejores decisiones</h2>
+                        <p class="section-subtitle section-subtitle--left">Implementamos inteligencia artificial donde tiene impacto operativo: atención, documentos, flujos repetitivos, análisis y reportes.</p>
+                        <ul class="check-list">
+                            <li>Chatbots empresariales.</li>
+                            <li>Automatización de procesos.</li>
+                            <li>IA para atención al cliente.</li>
+                            <li>Integración con WhatsApp.</li>
+                            <li>Automatización documental.</li>
+                            <li>Dashboards inteligentes.</li>
+                        </ul>
+                        <a href="#form-software" class="btn btn--primary btn--large">Solicitar propuesta</a>
                     </div>
                 </div>
-                <div class="demo-cta__action">
-                    <a href="https://wa.me/593983904993?text=Hola,%20quiero%20agendar%20una%20demostraci%C3%B3n" target="_blank" rel="noopener" class="btn btn--white btn--large">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
-                        <span>Agendar demo por WhatsApp</span>
-                    </a>
-                    <p class="demo-cta__note">Respuesta en menos de 2 horas en horario laboral</p>
+            </div>
+        </section>
+
+        <section class="why-section" id="nosotros">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Por qué OF1 Solutions</h2>
+                    <p class="section-subtitle">Experiencia técnica, criterio de negocio y soluciones preparadas para el mercado ecuatoriano.</p>
+                </div>
+                <div class="why-grid">
+                    <div><strong>Experiencia tecnológica</strong><span>Trayectoria en desarrollo, operación e implementación de software.</span></div>
+                    <div><strong>Desarrollo personalizado</strong><span>Soluciones ajustadas a procesos, roles y objetivos de negocio.</span></div>
+                    <div><strong>Soluciones para Ecuador</strong><span>Facturación electrónica, contexto tributario y necesidades locales.</span></div>
+                    <div><strong>Soporte especializado</strong><span>Acompañamiento técnico y funcional para equipos empresariales.</span></div>
+                    <div><strong>Escalabilidad</strong><span>Arquitecturas preparadas para crecer con usuarios, datos y procesos.</span></div>
+                    <div><strong>Integraciones empresariales</strong><span>Conexión entre sistemas, canales, datos y automatizaciones.</span></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Hablemos de tu Proyecto</h2>
-                <p class="section-subtitle">Escríbenos y en menos de 2 horas te respondemos con una propuesta clara, sin tecnicismos y sin compromiso.</p>
-            </div>
-            
-            <div class="contact__types">
-                <button class="contact__type active" data-type="general">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
-                        <polyline points="22,6 12,13 2,6" stroke-width="2"/>
-                    </svg>
-                    <span>Consulta General</span>
-                </button>
-                <button class="contact__type" data-type="project">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <polyline points="16 18 22 12 16 6" stroke-width="2" stroke-linecap="round"/>
-                        <polyline points="8 6 2 12 8 18" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    <span>Nuevo Proyecto</span>
-                </button>
-                <button class="contact__type" data-type="support">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2"/>
-                    </svg>
-                    <span>Soporte Técnico</span>
-                </button>
-            </div>
-            
-            <div class="contact__content">
-                <div class="contact__form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Nombre completo *</label>
-                                <input type="text" id="name" name="name" class="form-input" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="company" class="form-label">Empresa</label>
-                                <input type="text" id="company" name="company" class="form-input">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Teléfono *</label>
-                                <input type="tel" id="phone" name="phone" class="form-input" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group" id="projectTypeGroup">
-                            <label for="projectType" class="form-label">Tipo de proyecto</label>
-                            <select id="projectType" name="projectType" class="form-select">
-                                <option value="">Selecciona una opción</option>
-                                <option value="web">Aplicación Web</option>
-                                <option value="mobile">App Móvil</option>
-                                <option value="system">Sistema Empresarial</option>
-                                <option value="integration">Integración de Sistemas</option>
-                                <option value="optimization">Optimización</option>
-                                <option value="migration">Migración Cloud</option>
-                                <option value="other">Otro</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group" id="budgetGroup">
-                            <label for="budget" class="form-label">Presupuesto estimado</label>
-                            <select id="budget" name="budget" class="form-select">
-                                <option value="">Selecciona un rango</option>
-                                <option value="5-10k">$5,000 - $10,000</option>
-                                <option value="10-25k">$10,000 - $25,000</option>
-                                <option value="25-50k">$25,000 - $50,000</option>
-                                <option value="50k+">Más de $50,000</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Mensaje *</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="5" required placeholder="Cuéntanos sobre tu proyecto o necesidad..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-checkbox-label">
-                                <input type="checkbox" name="newsletter" id="newsletter">
-                                <span>Deseo recibir actualizaciones y recursos sobre tecnología empresarial</span>
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn--primary btn--large btn--full">
-                            <span>Enviar mensaje</span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
+        <section class="lead-section" id="contacto">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Hablemos de tu necesidad tecnológica</h2>
+                    <p class="section-subtitle">Selecciona el formulario que mejor se ajusta a tu interés. Todos llegan al equipo de OF1 Solutions para seguimiento comercial.</p>
+                </div>
+                <div class="lead-grid">
+                    <form class="lead-form" id="form-erp">
+                        <h3>Solicitar demostración ERP</h3>
+                        <input type="hidden" name="tipo_interes" value="Demostración ERP">
+                        <label>Nombre *<input type="text" name="name" required></label>
+                        <label>Empresa *<input type="text" name="company" required></label>
+                        <label>Correo *<input type="email" name="email" required></label>
+                        <label>Teléfono *<input type="tel" name="phone" required></label>
+                        <label>Tipo de interés<select name="interest" required><option value="ERP Ecuador">ERP Ecuador</option><option value="Facturación electrónica Ecuador">Facturación electrónica Ecuador</option><option value="Firma electrónica Ecuador">Firma electrónica Ecuador</option></select></label>
+                        <textarea name="message" rows="3" required>Quiero solicitar una demostración de FacturaOF1 ERP o información sobre firma electrónica desde la plataforma.</textarea>
+                        <button type="submit" class="btn btn--primary btn--full">Solicitar demostración</button>
                     </form>
-                    
-                    <div class="form-success" id="formSuccess">
-                        <div class="form-success__icon">✓</div>
-                        <h3 class="form-success__title">¡Mensaje enviado con éxito!</h3>
-                        <p class="form-success__text">Gracias por contactarnos. Nuestro equipo revisará tu mensaje y te responderá en las próximas 24 horas.</p>
-                        <button type="button" class="btn btn--primary" id="formSuccessClose">Cerrar</button>
-                    </div>
-                </div>
-                
-                <div class="contact__info">
-                    <div class="contact-info">
-                        <div class="contact-info__item">
-                            <div class="contact-info__icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info__content">
-                                <h4 class="contact-info__title">Ubicación</h4>
-                                <p class="contact-info__text">Quito, Ecuador<br>Trabajamos remoto con clientes en toda Latinoamérica</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info__item">
-                            <div class="contact-info__icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info__content">
-                                <h4 class="contact-info__title">Email</h4>
-                                <p class="contact-info__text">
-                                    <a href="mailto:info@of1solutions.com">info@of1solutions.com</a><br>
-                                    <small>Respuesta en 24 horas</small>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info__item">
-                            <div class="contact-info__icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info__content">
-                                <h4 class="contact-info__title">WhatsApp</h4>
-                                <p class="contact-info__text">
-                                    <a href="https://wa.me/593983904993?text=Hola,%20estoy%20interesado%20en%20sus%20servicios" target="_blank" rel="noopener">+593 983 904 993</a><br>
-                                    <small>Chat directo disponible</small>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info__item">
-                            <div class="contact-info__icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </div>
-                            <div class="contact-info__content">
-                                <h4 class="contact-info__title">LinkedIn</h4>
-                                <p class="contact-info__text">
-                                    <a href="https://www.linkedin.com/in/walter-molina-c" target="_blank" rel="noopener">Conecta con Walter Molina</a><br>
-                                    <small>CEO & Fundador</small>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info__hours">
-                            <h4>⏰ Horario de atención</h4>
-                            <p>Lunes a Viernes: 9:00 - 18:00 (GMT-5)<br>
-                            Sábados: 10:00 - 14:00<br>
-                            <em>Emergencias 24/7 para clientes con soporte</em></p>
-                        </div>
-                    </div>
+                    <form class="lead-form" id="form-software">
+                        <h3>Solicitar desarrollo de software</h3>
+                        <input type="hidden" name="tipo_interes" value="Desarrollo de software">
+                        <label>Nombre *<input type="text" name="name" required></label>
+                        <label>Empresa *<input type="text" name="company" required></label>
+                        <label>Correo *<input type="email" name="email" required></label>
+                        <label>Teléfono *<input type="tel" name="phone" required></label>
+                        <label>Tipo de interés<select name="interest" required><option value="Desarrollo de software Ecuador">Desarrollo de software Ecuador</option><option value="Aplicaciones móviles">Aplicaciones móviles</option><option value="Integraciones empresariales">Integraciones empresariales</option></select></label>
+                        <textarea name="message" rows="3" required>Quiero conversar sobre un proyecto de software a medida.</textarea>
+                        <button type="submit" class="btn btn--primary btn--full">Solicitar propuesta</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__logo">
-                    <img src="assets/logo-light.png" alt="OF1 SOLUTIONS Logo" class="footer__logo-image">
-                    <p class="footer__tagline">La IA nos hace rápidos. La experiencia nos hace expertos.</p>
-                    <p class="footer__description">Software terminado y operativo para negocios ecuatorianos. ERP, gestión deportiva y gimnasios.</p>
+                    <img src="assets/logo-light.png" alt="OF1 Solutions" class="footer__logo-image">
+                    <p class="footer__tagline">Tecnología empresarial para crecer, automatizar y decidir mejor.</p>
+                    <p class="footer__description">Desarrollo de software, IA, automatización, ERP, facturación electrónica y firma electrónica para empresas en Ecuador.</p>
                 </div>
-                
-                <div class="footer__remote-work">
-                    <h4 class="footer__title">Trabajo 100% Remoto</h4>
-                    <p class="footer__description">Enfoque en resultados, comunicación asíncrona, confianza y colaboración ágil. Priorizamos calidad, seguridad, aprendizaje continuo y bienestar del equipo.</p>
-                    <div class="footer__badges">
-                        <span class="footer-badge">🎯 Resultados</span>
-                        <span class="footer-badge">🤝 Confianza</span>
-                        <span class="footer-badge">🚀 Agilidad</span>
-                    </div>
-                </div>
-                
                 <div class="footer__links">
-                    <h4 class="footer__title">Navegación</h4>
+                    <h4 class="footer__title">Soluciones</h4>
                     <ul class="footer__list">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#productos">Productos</a></li>
-                        <li><a href="#facturacion">FacturaOf1</a></li>
-                        <li><a href="#comparativa">Comparativa</a></li>
-                        <li><a href="#casos">Casos de Éxito</a></li>
+                        <li><a href="#software">Desarrollo de Software</a></li>
+                        <li><a href="#ia">IA y Automatización</a></li>
+                        <li><a href="#erp">FacturaOF1 ERP</a></li>
+                        <li><a href="https://facturaof1.of1solutions.com/solicitar-firma-electronica" target="_blank" rel="noopener">Obtén tu Firma Electrónica</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer__links">
-                    <h4 class="footer__title">Empresa</h4>
+                    <h4 class="footer__title">Contacto</h4>
                     <ul class="footer__list">
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                        <li><a href="#privacidad">Privacidad</a></li>
-                        <li><a href="#terminos">Términos</a></li>
+                        <li><a href="mailto:info@of1solutions.com">info@of1solutions.com</a></li>
+                        <li><a href="https://wa.me/593983904993" target="_blank" rel="noopener">+593 983 904 993</a></li>
+                        <li><a href="https://www.linkedin.com/in/walter-molina-c" target="_blank" rel="noopener">LinkedIn</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer__social">
-                    <h4 class="footer__title">Conecta</h4>
-                    <p class="footer__description">Síguenos en LinkedIn</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/walter-molina-c" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                    </div>
+                <div class="footer__links">
+                    <h4 class="footer__title">SEO</h4>
+                    <p class="footer__description">Empresa de software en Ecuador especializada en ERP, automatización empresarial e inteligencia artificial para empresas.</p>
                 </div>
             </div>
-            
             <div class="footer__bottom">
-                <p class="footer__copyright">© 2025 OF1 SOLUTIONS S.A.S. Todos los derechos reservados. Quito, Ecuador.</p>
+                <p class="footer__copyright">© 2026 OF1 Solutions S.A.S. Todos los derechos reservados. Quito, Ecuador.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/593983904993?text=Hola,%20estoy%20interesado%20en%20sus%20servicios" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/593983904993?text=Hola,%20estoy%20interesado%20en%20las%20soluciones%20tecnol%C3%B3gicas%20de%20OF1%20Solutions" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24" class="whatsapp-icon">
             <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
     </a>
 
-    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 </html>

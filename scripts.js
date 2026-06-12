@@ -280,6 +280,9 @@ const observer = new IntersectionObserver(function(entries) {
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = [
         '.service-card',
+        '.capability-card',
+        '.lead-form',
+        '.why-grid div',
         '.methodology__step',
         '.case-card',
         '.value-item',
@@ -302,6 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
+const leadForms = document.querySelectorAll('.lead-form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -354,6 +358,51 @@ if (contactForm) {
     });
 }
 
+leadForms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        if (!validateLeadForm(data)) {
+            return;
+        }
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
+        fetch('https://formspree.io/f/xeeqjbyd', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al enviar el formulario');
+            }
+
+            form.reset();
+            submitButton.textContent = 'Solicitud enviada';
+            setTimeout(() => {
+                submitButton.textContent = originalButtonText;
+            }, 3500);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Hubo un error al enviar la solicitud. Por favor, intenta de nuevo o escríbenos por WhatsApp.');
+            submitButton.textContent = originalButtonText;
+        })
+        .finally(() => {
+            submitButton.disabled = false;
+        });
+    });
+});
+
 function validateForm(data) {
     const { name, email, message } = data;
     
@@ -372,6 +421,42 @@ function validateForm(data) {
         return false;
     }
     
+    return true;
+}
+
+function validateLeadForm(data) {
+    const { name, company, email, phone, interest, message } = data;
+
+    if (!name || name.trim().length < 2) {
+        alert('Por favor, ingresa tu nombre.');
+        return false;
+    }
+
+    if (!company || company.trim().length < 2) {
+        alert('Por favor, ingresa el nombre de tu empresa.');
+        return false;
+    }
+
+    if (!email || !isValidEmail(email)) {
+        alert('Por favor, ingresa un correo válido.');
+        return false;
+    }
+
+    if (!phone || phone.trim().length < 7) {
+        alert('Por favor, ingresa un teléfono válido.');
+        return false;
+    }
+
+    if (!interest) {
+        alert('Por favor, selecciona el tipo de interés.');
+        return false;
+    }
+
+    if (!message || message.trim().length < 10) {
+        alert('Por favor, agrega un mensaje breve.');
+        return false;
+    }
+
     return true;
 }
 

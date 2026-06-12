@@ -1,11 +1,4 @@
 # Cloudflare Pages - Wrangler Configuration
 name = "of1solutions"
+pages_build_output_dir = "."
 compatibility_date = "2025-01-01"
-
-# Workers AI Binding
-[ai]
-binding = "AI"
-
-# Static Assets Configuration
-[assets]
-directory = "."
