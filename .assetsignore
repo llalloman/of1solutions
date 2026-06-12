@@ -1,0 +1,7 @@
+.git
+.github
+.wrangler
+.DS_Store
+README.md
+styles.css.bak
+wrangler.toml

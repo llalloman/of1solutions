@@ -1,4 +1,6 @@
-# Cloudflare Pages - Wrangler Configuration
 name = "of1solutions"
-pages_build_output_dir = "."
+account_id = "522f0e0088e92c24e684578495d8702e"
 compatibility_date = "2025-01-01"
+
+[assets]
+directory = "."
