@@ -1998,6 +1998,13 @@ button {
     font-size: var(--fs-sm);
 }
 
+.product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
 .erp-card {
     background: var(--color-white);
     border-radius: var(--radius-xl);
@@ -2281,6 +2288,11 @@ button {
 
     .erp-card__metrics {
         flex-direction: column;
+    }
+
+    .product-actions .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
