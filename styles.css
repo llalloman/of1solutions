@@ -2005,6 +2005,104 @@ button {
     align-items: center;
 }
 
+.signature-pricing {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 100%);
+}
+
+.signature-pricing__layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.signature-pricing__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-lg) 0;
+}
+
+.signature-pricing__badges span {
+    padding: 0.65rem 0.9rem;
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    color: var(--color-gray-700);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+.signature-price-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-xl);
+}
+
+.signature-price-card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.signature-price-card__head strong {
+    font-family: var(--font-primary);
+    font-size: var(--fs-xl);
+    color: var(--color-gray-900);
+}
+
+.signature-price-card__head span {
+    padding: 0.35rem 0.7rem;
+    border-radius: var(--radius-full);
+    background: rgba(0, 201, 183, 0.12);
+    color: var(--color-secondary-dark);
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.signature-price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.signature-price-grid div {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    background: var(--color-gray-50);
+    border: 1px solid var(--color-gray-200);
+}
+
+.signature-price-grid span {
+    display: block;
+    color: var(--color-gray-500);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.signature-price-grid strong {
+    display: block;
+    color: var(--color-gray-900);
+    font-family: var(--font-primary);
+    font-size: var(--fs-2xl);
+}
+
+.signature-price-card__note {
+    margin-top: var(--spacing-md);
+    color: var(--color-gray-500);
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+}
+
 .erp-card {
     background: var(--color-white);
     border-radius: var(--radius-xl);
@@ -2257,8 +2355,13 @@ button {
 
     .split-section,
     .split-section--reverse,
+    .signature-pricing__layout,
     .signature-layout {
         grid-template-columns: 1fr;
+    }
+
+    .signature-price-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -2293,6 +2396,10 @@ button {
     .product-actions .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .signature-price-grid {
+        grid-template-columns: 1fr;
     }
 }
 
