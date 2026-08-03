@@ -248,7 +248,7 @@ El sitio incluye:
 
 **OF1 SOLUTIONS**
 - 📧 Email: contacto@of1solutions.com
-- 📱 Teléfono: +51 999 999 999
+- 📱 Teléfono: +593 991 840 854
 - 🔗 LinkedIn: [OF1 SOLUTIONS](https://linkedin.com/company/of1solutions)
 - 📍 Ubicación: Lima, Perú
 
