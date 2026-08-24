@@ -282,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.service-card',
         '.capability-card',
         '.lead-form',
+        '.firmador-panel',
         '.why-grid div',
         '.methodology__step',
         '.case-card',

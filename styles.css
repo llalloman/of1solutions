@@ -4479,3 +4479,151 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================
+   OF1 FIRMADOR SHOWCASE
+   ======================================== */
+
+.firmador-showcase {
+    padding: var(--spacing-4xl) 0;
+    background: linear-gradient(180deg, var(--color-white) 0%, #F5FAFF 100%);
+}
+
+.firmador-showcase__layout {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.firmador-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-2xl);
+    border: 1px solid rgba(0, 102, 204, 0.14);
+    background: linear-gradient(135deg, #06182c 0%, #0b365c 58%, #063f49 100%);
+    box-shadow: var(--shadow-2xl);
+    padding: var(--spacing-xl);
+    color: var(--color-white);
+}
+
+.firmador-panel::before {
+    content: '';
+    position: absolute;
+    inset: -40% -20% auto auto;
+    width: 320px;
+    height: 320px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(0, 201, 183, 0.28), transparent 66%);
+}
+
+.firmador-panel__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.firmador-panel__top span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.firmador-panel__top strong {
+    color: #8EF2E7;
+    font-size: var(--fs-sm);
+}
+
+.firmador-panel__document {
+    position: relative;
+    display: grid;
+    gap: 0.75rem;
+    min-height: 320px;
+    border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.96);
+    padding: var(--spacing-xl);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.firmador-panel__document div {
+    height: 14px;
+    border-radius: var(--radius-full);
+    background: #D8E5F3;
+}
+
+.firmador-panel__document div:nth-child(1) {
+    width: 70%;
+}
+
+.firmador-panel__document div:nth-child(2) {
+    width: 88%;
+}
+
+.firmador-panel__document div:nth-child(3) {
+    width: 62%;
+}
+
+.firmador-panel__document span {
+    position: absolute;
+    right: var(--spacing-xl);
+    bottom: var(--spacing-xl);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 72px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--color-primary-dark);
+    font-size: var(--fs-sm);
+    font-weight: 800;
+}
+
+.firmador-panel__checks {
+    position: relative;
+    display: grid;
+    gap: 0.75rem;
+    margin-top: var(--spacing-lg);
+}
+
+.firmador-panel__checks span {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.85rem 1rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+.product-actions--light {
+    margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 1024px) {
+    .firmador-showcase__layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .firmador-panel {
+        padding: var(--spacing-md);
+    }
+
+    .firmador-panel__document {
+        min-height: 250px;
+    }
+
+    .firmador-panel__document span {
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+        width: auto;
+    }
+}
