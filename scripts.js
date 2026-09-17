@@ -249,3 +249,51 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 window.addEventListener('resize', updateNavigation);
 updateNavigation();
+
+// Real screenshots: manual selection and a native, keyboard-accessible dialog.
+const imageDialog = document.querySelector('.image-dialog');
+const dialogImage = imageDialog.querySelector('img');
+let imageOpener;
+imageDialog.querySelector('.image-dialog__close').addEventListener('click', () => imageDialog.close());
+imageDialog.addEventListener('click', event => {
+    if (event.target === imageDialog) {
+        const box = imageDialog.getBoundingClientRect();
+        if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) imageDialog.close();
+    }
+});
+imageDialog.addEventListener('close', () => imageOpener?.focus());
+document.querySelectorAll('[data-gallery]').forEach(gallery => {
+    const photo = gallery.querySelector('img');
+    const expand = gallery.querySelector('[data-gallery-expand]');
+    const caption = gallery.querySelector('[data-gallery-caption]');
+    const choices = [...gallery.querySelectorAll('[data-gallery-image]')];
+    choices[0]?.setAttribute('aria-current', 'true');
+    choices.forEach(choice => {
+        choice.addEventListener('click', event => {
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            photo.src = choice.href;
+            photo.alt = choice.dataset.alt;
+            photo.width = Number(choice.dataset.width);
+            photo.height = Number(choice.dataset.height);
+            caption.textContent = choice.dataset.caption;
+            expand.href = choice.href;
+            expand.setAttribute('aria-label', `Ampliar captura: ${photo.alt}`);
+            choices.forEach(item => {
+                if (item === choice) item.setAttribute('aria-current', 'true');
+                else item.removeAttribute('aria-current');
+            });
+        });
+    });
+    expand.addEventListener('click', event => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || typeof imageDialog.showModal !== 'function') return;
+        event.preventDefault();
+        imageOpener = expand;
+        dialogImage.src = photo.src;
+        dialogImage.alt = photo.alt;
+        dialogImage.width = photo.width;
+        dialogImage.height = photo.height;
+        imageDialog.querySelector('.image-dialog__caption').textContent = photo.alt;
+        imageDialog.showModal();
+    });
+});

@@ -71,3 +71,22 @@ Los enlaces de CSS y JavaScript usan versión de caché. Incrementar esa versió
 - Mayor tamaño de etiquetas, especialidades y textos de producto; menos espacio entre secciones y acentos gráficos compartidos.
 - Comprobación de desbordamiento en 1920, 1440, 1366, 1024, 768, 390 y 320 px; inspección visual del hero y liderazgo en escritorio y del ecosistema a 320 px.
 - Las capturas reales de ERP y Firmador siguen pendientes de disponer de imágenes adecuadas; se mantienen las vistas conceptuales identificadas.
+
+## Selector de productos y Ligas Barriales
+
+Los tres productos comparten un selector manual accesible y un área de altura estable. Incluye teclado, enlaces directos a #erp, #firmador y #ligas, y transición de entrada de 250 ms. Sin JavaScript se muestran las tres secciones. Los paneles inactivos se excluyen del foco y de los lectores de pantalla. La navegación señala la sección actual y el header se compacta al desplazarse.
+
+Sistema de Ligas Barriales: proceso de calificación, gestión de jugadores y marcadores confirmados por el propietario; portal por liga, campeonatos, categorías, jornadas, horarios y posiciones visibles en la captura. Su botón selecciona el producto en el formulario mediante #form-ligas.
+
+Se recibieron visualmente tres capturas del Firmador (documentos, certificados y validación) y cuatro del ERP (dashboard, POS, factura e inventario). Los archivos originales todavía no están disponibles en el repositorio: no se han incorporado imágenes ni se han sustituido las vistas conceptuales. La presentación prevista es una galería manual dentro de cada producto, sin reproducción automática ni nuevas secciones largas.
+
+## Capturas reales integradas
+
+Se sustituyeron las vistas conceptuales por los archivos originales de assets:
+- ERP: factura1.png (dashboard), pos.png, factura2.png (factura) y productos.png (inventario).
+- Firmador: firmador1.png (documentos), firmador2.png (certificados), firmador3.png (validación).
+- Ligas: Liga.png (portal deportivo).
+
+Cada producto muestra una imagen, con selección manual y ampliación mediante un diálogo nativo. Escape o Cerrar devuelve el foco a la imagen. Sin JavaScript, los enlaces permiten abrir las capturas originales. No hay reproducción automática. Se conservan proporciones, carga diferida y dimensiones explícitas. La sección mantiene altura estable al alternar productos.
+
+Las capturas muestran datos reales de los ejemplos aportados, incluidos datos del certificado en firmador3.png; no fueron anonimizadas. No se realizó publicación.
