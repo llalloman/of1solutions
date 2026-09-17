@@ -1,4 +1,4 @@
-﻿/** OF1 Solutions — progressive enhancement, no runtime dependencies. */
+/** OF1 Solutions — progressive enhancement, no runtime dependencies. */
 'use strict';
 
 const header = document.getElementById('header');
@@ -39,11 +39,11 @@ header.addEventListener('focusout', event => {
 // Existing form URLs now select the appropriate interest in the unified form.
 const form = document.getElementById('project-form');
 function selectContactInterest() {
-    const interests = { '#form-erp': 'ERP Ecuador', '#form-software': 'Desarrollo de software Ecuador' };
+    const interests = { '#form-erp': 'ERP Ecuador', '#form-software': 'Desarrollo de software Ecuador', '#form-ligas': 'Sistema de Ligas Barriales' };
     const interest = interests[window.location.hash];
     if (interest) {
         form.elements.interest.value = interest;
-        form.elements.tipo_interes.value = interest === 'ERP Ecuador' ? 'Demostración ERP' : 'Desarrollo de software';
+        form.elements.tipo_interes.value = interest === 'ERP Ecuador' ? 'Demostración ERP' : interest;
     }
 }
 window.addEventListener('hashchange', selectContactInterest);
@@ -155,3 +155,97 @@ approvedCases.forEach(item => {
     caseList.append(fragment);
 });
 document.getElementById('proyectos').hidden = !caseList.children.length;
+
+// Product explorer: overlapping grid cells reserve the tallest panel's height.
+// Inactive panels remain measurable, but are neither focusable nor announced.
+const productSelector = document.querySelector('.product-selector');
+const productLinks = [...productSelector.querySelectorAll('[data-product]')];
+const productStage = document.querySelector('.product-stage');
+productSelector.setAttribute('role', 'tablist');
+productStage.classList.add('is-enhanced');
+function activateProduct(selected, focus = false) {
+    productLinks.forEach(link => {
+        const active = link === selected;
+        const panel = document.getElementById(link.dataset.product);
+        link.setAttribute('aria-selected', String(active));
+        link.tabIndex = active ? 0 : -1;
+        panel.classList.toggle('is-active', active);
+        panel.setAttribute('aria-hidden', String(!active));
+        panel.inert = !active;
+    });
+    if (focus) selected.focus();
+}
+function productFromHash() {
+    const selected = productLinks.find(link => link.hash === window.location.hash);
+    if (selected) activateProduct(selected);
+    return selected;
+}
+productLinks.forEach((link, index) => {
+    const panel = document.getElementById(link.dataset.product);
+    link.setAttribute('role', 'tab');
+    link.setAttribute('aria-controls', panel.id);
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', link.id);
+    panel.tabIndex = 0;
+    link.addEventListener('click', event => {
+        // Preserve opening a product URL in a separate tab.
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        activateProduct(link);
+        history.replaceState(null, '', link.hash);
+    });
+    link.addEventListener('keydown', event => {
+        let next;
+        if (['ArrowRight', 'ArrowDown'].includes(event.key)) next = (index + 1) % productLinks.length;
+        if (['ArrowLeft', 'ArrowUp'].includes(event.key)) next = (index - 1 + productLinks.length) % productLinks.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = productLinks.length - 1;
+        if (event.key === ' ') next = index;
+        if (next !== undefined) {
+            event.preventDefault();
+            activateProduct(productLinks[next], true);
+            history.replaceState(null, '', productLinks[next].hash);
+        }
+    });
+});
+activateProduct(productLinks[0]);
+if (productFromHash()) {
+    requestAnimationFrame(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ behavior: 'instant' }));
+}
+window.addEventListener('hashchange', productFromHash);
+document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || productSelector.contains(link)) return;
+    const product = productLinks.find(item => item.hash === link.hash);
+    if (product) activateProduct(product);
+});
+
+// A single passive listener updates both the header and current navigation.
+const navigationSections = [
+    ['servicios', 'servicios'], ['software', 'servicios'],
+    ['productos', 'productos'], ['firma-electronica', 'productos'],
+    ['ia', 'ia'], ['nosotros', 'nosotros'], ['contacto', 'contacto']
+].map(([id, navId]) => ({ element: document.getElementById(id), navId }));
+let navigationFrame = false;
+function updateNavigation() {
+    const compact = header.classList.contains('is-scrolled');
+    header.classList.toggle('is-scrolled', window.scrollY > (compact ? 40 : 120));
+    const boundary = header.getBoundingClientRect().height + 120;
+    let current = '';
+    for (const { element, navId } of navigationSections) {
+        if (element.getBoundingClientRect().top <= boundary) current = navId;
+    }
+    nav.querySelectorAll('a').forEach(link => {
+        if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+    });
+    navigationFrame = false;
+}
+window.addEventListener('scroll', () => {
+    if (!navigationFrame) {
+        navigationFrame = true;
+        requestAnimationFrame(updateNavigation);
+    }
+}, { passive: true });
+window.addEventListener('resize', updateNavigation);
+updateNavigation();

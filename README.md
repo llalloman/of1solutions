@@ -62,3 +62,12 @@ El menú no bloquea el scroll; cierra con Escape, al navegar, al salir el foco y
 Pendientes: envío real a Formspree, auditoría Lighthouse/axe, lector de pantalla y navegadores distintos a Chrome. El endpoint no recibió mensajes de prueba. Las vistas de producto son diagramas conceptuales, no capturas del sistema en producción. No se realizó despliegue.
 
 Los enlaces de CSS y JavaScript usan versión de caché. Incrementar esa versión cuando cambien, porque `_headers` configura caché prolongada para esos recursos.
+
+## Refinamiento visual
+
+- Hero con fondo azul profundo, retícula, arcos turquesa y conexiones con animación inicial breve; respeta movimiento reducido.
+- Composición específica del ecosistema en móvil, sin superponer nodos y textos.
+- Cuatro perfiles de liderazgo con estructura común y sin fotografías: cuatro columnas en escritorio, dos en tablet y una en móvil.
+- Mayor tamaño de etiquetas, especialidades y textos de producto; menos espacio entre secciones y acentos gráficos compartidos.
+- Comprobación de desbordamiento en 1920, 1440, 1366, 1024, 768, 390 y 320 px; inspección visual del hero y liderazgo en escritorio y del ecosistema a 320 px.
+- Las capturas reales de ERP y Firmador siguen pendientes de disponer de imágenes adecuadas; se mantienen las vistas conceptuales identificadas.
