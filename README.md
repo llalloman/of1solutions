@@ -36,7 +36,7 @@ Se conservaron la paleta azul `#0066CC` y turquesa `#00C9B7` del CSS existente, 
 - `scripts.js`: menú, tabs con flechas/Home/End, preselección de interés, revelado sutil, formulario y casos.
 - `assets/`: logos y fotografía existente de Walter.
 
-El título institucional es **Liderazgo de OF1 Solutions**. Darío aparece como **Business Development**, siguiendo la indicación de no presentarlo como fundador, que contradice el cargo Co-Founder de la lista original. Los demás nombres, cargos y especialidades proceden de la información facilitada. No se añadieron biografías. Los cuatro perfiles se presentan sin fotografías, siguiendo la indicación de retirar la foto del fundador.
+El título institucional es **Liderazgo de OF1 Solutions**. Darío aparece como **Business Development**, siguiendo la indicación de no presentarlo como fundador, que contradice el cargo Co-Founder de la lista original. Los demás nombres, cargos y especialidades proceden de la información facilitada. No se añadieron biografías. El perfil de Walter usa `assets/walter-molina.jpeg`; los otros tres perfiles permanecen tipográficos hasta contar con fotografías autorizadas.
 
 Para publicar casos reales, completar `approvedCases` en `scripts.js` con `industry`, `title`, `summary` y `url`. El componente usa `textContent`, valida el protocolo del enlace y permanece oculto sin datos. No añadir clientes, resultados o cifras sin respaldo.
 
@@ -67,10 +67,10 @@ Los enlaces de CSS y JavaScript usan versión de caché. Incrementar esa versió
 
 - Hero con fondo azul profundo, retícula, arcos turquesa y conexiones con animación inicial breve; respeta movimiento reducido.
 - Composición específica del ecosistema en móvil, sin superponer nodos y textos.
-- Cuatro perfiles de liderazgo con estructura común y sin fotografías: cuatro columnas en escritorio, dos en tablet y una en móvil.
+- Cuatro perfiles de liderazgo con estructura común: Walter con `assets/walter-molina.jpeg`, y los otros tres perfiles tipográficos; cuatro columnas en escritorio, dos en tablet y una en móvil.
 - Mayor tamaño de etiquetas, especialidades y textos de producto; menos espacio entre secciones y acentos gráficos compartidos.
 - Comprobación de desbordamiento en 1920, 1440, 1366, 1024, 768, 390 y 320 px; inspección visual del hero y liderazgo en escritorio y del ecosistema a 320 px.
-- Las capturas reales de ERP y Firmador siguen pendientes de disponer de imágenes adecuadas; se mantienen las vistas conceptuales identificadas.
+- Las capturas reales de ERP y Firmador están disponibles en las galerías manuales de productos.
 
 ## Selector de productos y Ligas Barriales
 
