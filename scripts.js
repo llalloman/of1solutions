@@ -98,7 +98,7 @@ if ('IntersectionObserver' in window) {
             }
         });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.section-heading, .product-copy, .principles, .leadership-heading').forEach(el => reveals.observe(el));
+    document.querySelectorAll('.section-heading, .product-copy, .product-gallery, .principles, .principles > div, .signature-price-card, .leader-profile, .leadership-heading').forEach(el => reveals.observe(el));
 }
 
 // Existing Formspree endpoint; inline status, retained data on failure, timeout.
@@ -272,10 +272,13 @@ document.querySelectorAll('[data-gallery]').forEach(gallery => {
         choice.addEventListener('click', event => {
             if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
+            photo.classList.add('is-changing');
+            photo.addEventListener('load', () => photo.classList.remove('is-changing'), { once: true });
             photo.src = choice.href;
             photo.alt = choice.dataset.alt;
             photo.width = Number(choice.dataset.width);
             photo.height = Number(choice.dataset.height);
+            if (photo.complete) requestAnimationFrame(() => photo.classList.remove('is-changing'));
             caption.textContent = choice.dataset.caption;
             expand.href = choice.href;
             expand.setAttribute('aria-label', `Ampliar captura: ${photo.alt}`);
